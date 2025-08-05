@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 60px 10%;
-  background: linear-gradient(to right, #3B7197, #74BDE0);
+  background: linear-gradient(to right, #3b7197, #74bde0);
   color: white;
   flex-wrap: wrap;
 }
@@ -41,7 +41,7 @@
   padding: 12px 25px;
   font-size: 1rem;
   background-color: #fff;
-  color: #3B7197;
+  color: #3b7197;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
@@ -49,7 +49,7 @@
 }
 
 .cta-button:hover {
-  background-color: #74BDE0;
+  background-color: #74bde0;
   color: white;
 }
 
@@ -87,7 +87,6 @@
   }
 }
 
-
 /* ===Features Section== */
 
 .upload-feature-section {
@@ -97,7 +96,7 @@
 
 .upload-box {
   background-color: #ffffff;
-  border: 2px dashed #3B7197;
+  border: 2px dashed #3b7197;
   border-radius: 10px;
   max-width: 500px;
 }
@@ -224,3 +223,87 @@
 .profile span {
   font-weight: 600;
 }
+
+/* ======Result Section=== */
+
+#matched-results {
+  background-color: #f9f9f9;
+}
+
+.result-card {
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.result-card:hover {
+  transform: scale(1.02);
+}
+
+.confidence-score {
+  font-weight: bold;
+}
+
+.confidence-score.high {
+  color: #28a745;
+}
+
+.confidence-score.medium {
+  color: #ffc107;
+}
+
+.confidence-score.low {
+  color: #dc3545;
+}
+
+.result-card .btn i {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .result-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Tooltip */
+.info-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.info-tooltip .tooltip-text {
+  visibility: hidden;
+  width: 260px;
+  background-color: #3B7197;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.info-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Confidence colors */
+.confidence-score.high {
+  color: #28a745; /* green */
+}
+.confidence-score.medium {
+  color: #ffc107; /* yellow */
+}
+.confidence-score.low {
+  color: #dc3545; /* red */
+}
+
