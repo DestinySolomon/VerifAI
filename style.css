@@ -434,3 +434,20 @@ textarea{
   cursor: pointer;
   font-size: 20px;
 }
+
+
+/* ======Footer===== */
+.footer-link:hover {
+  color: #74BDE0 !important; /* Use your site color */
+  text-decoration: underline;
+}
+
+#backToTop {
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+#backToTop:hover {
+  transform: translateY(-5px);
+}
+
