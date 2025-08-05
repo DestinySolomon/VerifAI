@@ -1,3 +1,22 @@
+
+
+  // Add background shadow to navs when scrolling
+  window.addEventListener('scroll', function () {
+    const subNav = document.getElementById('subNav');
+    const mainNav = document.getElementById('mainNav');
+
+    if (window.scrollY > 20) {
+      subNav.classList.add('scrolled');
+      mainNav.classList.add('scrolled');
+    } else {
+      subNav.classList.remove('scrolled');
+      mainNav.classList.remove('scrolled');
+    }
+  });
+
+
+
+
 // Counter Animation
 const counters = document.querySelectorAll(".counter");
 counters.forEach((counter) => {
