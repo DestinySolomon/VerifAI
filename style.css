@@ -313,6 +313,25 @@
   font-weight: 600;
 }
 
+ .testimonial-container .testimonial {
+    background-color: #f9f9f9;
+    transition: transform 0.3s;
+  }
+
+  .testimonial-container .testimonial:hover {
+    transform: translateY(-5px);
+  }
+
+  .profile img {
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+  }
+
+  .testimonial-container {
+    margin-top: 2rem;
+  }
+
 
 
 /* === Report section== */
