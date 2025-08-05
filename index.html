@@ -477,13 +477,84 @@
 
 
 
+    <!-- REPORT SUSPICIOUS USE SECTION -->
+<section class="report-section py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <i class="fas fa-shield-alt fa-3x text-danger mb-2"></i>
+      <h2 class="fw-bold">Report Suspicious Use</h2>
+      <p class="text-muted">Think you've found a fake profile or impersonator? Let us know so we can take action!</p>
+    </div>
+
+    <form class="row g-3 justify-content-center">
+      <div class="col-md-6">
+        <label for="platform" class="form-label">Platform</label>
+        <select id="platform" class="form-select" required>
+          <option selected disabled value="">Choose...</option>
+          <option>Facebook</option>
+          <option>Instagram</option>
+          <option>Twitter/X</option>
+          <option>TikTok</option>
+          <option>LinkedIn</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="profileLink" class="form-label">Suspicious Profile Link</label>
+        <input type="url" class="form-control" id="profileLink" placeholder="https://example.com/fake-user" required>
+      </div>
+
+      <div class="col-12">
+        <label for="reason" class="form-label">Why do you suspect this?</label>
+        <textarea class="form-control" id="reason" rows="3" placeholder="Give us some details..." required></textarea>
+      </div>
+
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-danger px-5">Report Now</button>
+      </div>
+
+      <div class="col-12 text-center mt-3">
+        <small class="text-muted"><i class="fas fa-lock me-1"></i>Your report is 100% confidential and helps improve community safety.</small>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+<!-- Floating Chatbot Button -->
+<div class="chatbot-container">
+  <button id="chatbotToggle" class="chatbot-btn">
+    💬
+  </button>
+
+  <!-- Chatbot Window -->
+  <div id="chatbotWindow" class="chatbot-window">
+    <div class="chatbot-header">
+      <h5>VerifAI Assistant</h5>
+      <span id="closeChat" class="close-chat">&times;</span>
+    </div>
+    <div class="chatbot-messages">
+      <p><strong>iBot:</strong> Hi there! Need help verifying an image or reporting fraud?</p>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" placeholder="Type your message..." />
+      <button>Send</button>
+    </div>
+  </div>
+</div>
+
+
+
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <!-- AOS JS (Before </body>) -->
+    
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init();

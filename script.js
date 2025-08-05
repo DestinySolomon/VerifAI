@@ -26,3 +26,19 @@
     groups[current].classList.add('active');
   }, 6000);
 
+
+
+  // JS to toggle chatbot
+const chatbotToggle = document.getElementById('chatbotToggle');
+const chatbotWindow = document.getElementById('chatbotWindow');
+const closeChat = document.getElementById('closeChat');
+
+chatbotToggle.addEventListener('click', () => {
+  chatbotWindow.style.display = 'flex';
+});
+
+closeChat.addEventListener('click', () => {
+  chatbotWindow.style.display = 'none';
+});
+
+
