@@ -147,6 +147,10 @@ userInput.addEventListener('keypress', e => {
   });
 
 
+  // Registration Form
+
+  
+
 
 // Footer
 document.getElementById("year").textContent = new Date().getFullYear();

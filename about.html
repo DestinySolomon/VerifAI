@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -20,31 +20,34 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
     />
-  <title>Verifai</title>
-</head>
-<body>
-  
-   <!-- RESPONSIVE SUB NAV -->
-<div class="subnav px-3 py-2 text-white" style="background-color: #74bde0; font-size: 0.9rem;">
-  <div class="container-fluid">
-    <div class="row align-items-center text-center text-md-start">
-      <!-- Contact Info -->
-      <div class="col-12 col-md-6 mb-2 mb-md-0">
-        <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start gap-2">
-          <span><i class="fas fa-envelope"></i> support@verifai.com</span>
-          <span class="d-none d-md-inline">|</span>
-          <span><i class="fas fa-phone"></i> +234-800-123-4567</span>
+    <title>Verifai</title>
+  </head>
+  <body>
+    <!-- RESPONSIVE SUB NAV -->
+    <div
+      class="subnav px-3 py-2 text-white"
+      style="background-color: #74bde0; font-size: 0.9rem"
+    >
+      <div class="container-fluid">
+        <div class="row align-items-center text-center text-md-start">
+          <!-- Contact Info -->
+          <div class="col-12 col-md-6 mb-2 mb-md-0">
+            <div
+              class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start gap-2"
+            >
+              <span><i class="fas fa-envelope"></i> support@verifai.com</span>
+              <span class="d-none d-md-inline">|</span>
+              <span><i class="fas fa-phone"></i> +234-800-123-4567</span>
+            </div>
+          </div>
+
+          <!-- Location Info -->
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <span><i class="fas fa-map-marker-alt"></i> Uyo, Nigeria</span>
+          </div>
         </div>
       </div>
-
-      <!-- Location Info -->
-      <div class="col-12 col-md-6 text-center text-md-end">
-        <span><i class="fas fa-map-marker-alt"></i> Uyo, Nigeria</span>
-      </div>
     </div>
-  </div>
-</div>
-
 
     <!-- MAIN NAVBAR -->
     <nav class="navbar navbar-expand-lg" style="background-color: #3b7197">
@@ -103,201 +106,283 @@
                 class="dropdown-menu dropdown-menu-end"
                 aria-labelledby="userDropdown"
               >
-                <li><a class="dropdown-item" href="#">Login</a></li>
-                <li><a class="dropdown-item" href="#">Register</a></li>
+                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Register</a>
+                </li>
               </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-  
+
     <!-- Hero Section -->
-<section class="about-hero-section">
-  <div class="container hero-container">
-    
-    <!-- Left Text -->
-    <div class="hero-text">
-      <h1 class="hero-title">Redefining Digital Trust,<br>One Face at a Time.</h1>
-      <p class="hero-subtitle">
-        VerifAI is your digital lie detector, fraud shield, and ID watchdog—wrapped in one intelligent system.  
-        We help individuals and businesses verify identities across social platforms and detect impersonation 
-        with real-time face tracking and cross-platform bio analysis. Whether you’re trying to confirm who’s 
-        really behind a profile or protect your own online reputation, VerifAI is here to bring peace of mind 
-        in the noisy world of digital identities.
-      </p>
-      <a href="#our-mission" class="btn btn-primary hero-btn">Learn More</a>
-    </div>
-
-    <!-- Right Image -->
-    <div class="hero-image">
-      <img src="Images/Ai_brain_left.png" alt="Animated Face Scan" id="verifai-animation">
-    </div>
-
-  </div>
-</section>
-
-<!-- WHAT WE DO SECTION -->
-<section class="what-we-do-section py-5" id="what-we-do">
-  <div class="container text-center">
-    <h2 class="mb-4">What We Do</h2>
-    <p class="mb-5 text-muted">VerifAI simplifies identity verification across digital platforms with powerful AI tools.</p>
-
-    <div class="row">
-      <!-- Face Verification -->
-      <div class="col-md-4 mb-4">
-        <div class="icon-box p-4 shadow-sm rounded-4 h-100 wow fadeInUp">
-          <div class="icon mb-3">
-            <i class="fas fa-user-check fa-3x text-primary animate-bounce"></i>
-          </div>
-          <h5>Face Verification</h5>
-          <p>We use AI-powered face recognition to verify real identities behind profiles and prevent impersonation.</p>
-        </div>
-      </div>
-
-      <!-- Bio Matching -->
-      <div class="col-md-4 mb-4">
-        <div class="icon-box p-4 shadow-sm rounded-4 h-100 wow fadeInUp" data-wow-delay="0.2s">
-          <div class="icon mb-3">
-            <i class="fas fa-id-badge fa-3x text-success animate-zoom"></i>
-          </div>
-          <h5>Bio Matching</h5>
-          <p>Our system compares user bios across platforms to detect inconsistencies and possible identity theft.</p>
-        </div>
-      </div>
-
-      <!-- Fraud Detection -->
-      <div class="col-md-4 mb-4">
-        <div class="icon-box p-4 shadow-sm rounded-4 h-100 wow fadeInUp" data-wow-delay="0.4s">
-          <div class="icon mb-3">
-            <i class="fas fa-shield-alt fa-3x text-danger animate-pulse"></i>
-          </div>
-          <h5>Fraud Detection</h5>
-          <p>We flag suspicious profiles and activities using smart algorithms and cross-platform analysis.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="timeline-section" id="verifai-timeline">
-  <div class="container">
-    <h2 class="section-title">Our Journey</h2>
-    <p class="section-subtitle">From humble beginnings to AI-powered verification, here’s how VerifAI came to life.</p>
-
-    <div class="timeline">
-
-      <!-- Timeline Item 1 -->
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <i class="fas fa-lightbulb"></i>
-        </div>
-        <div class="timeline-content">
-          <h3>2025 - The Spark</h3>
-          <p>
-            It all started with a simple idea: "What if people could instantly verify online identities without playing detective?"
-            From deep fakes to social fraud, we knew the internet needed a smarter guardian.
+    <section class="about-hero-section">
+      <div class="container hero-container">
+        <!-- Left Text -->
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Redefining Digital Trust,<br />One Face at a Time.
+          </h1>
+          <p class="hero-subtitle">
+            VerifAI is your digital lie detector, fraud shield, and ID
+            watchdog—wrapped in one intelligent system. We help individuals and
+            businesses verify identities across social platforms and detect
+            impersonation with real-time face tracking and cross-platform bio
+            analysis. Whether you’re trying to confirm who’s really behind a
+            profile or protect your own online reputation, VerifAI is here to
+            bring peace of mind in the noisy world of digital identities.
           </p>
+          <a href="#our-mission" class="btn btn-primary hero-btn">Learn More</a>
+        </div>
+
+        <!-- Right Image -->
+        <div class="hero-image">
+          <img
+            src="Images/Ai_brain_left.png"
+            alt="Animated Face Scan"
+            id="verifai-animation"
+          />
         </div>
       </div>
+    </section>
 
-      <!-- Timeline Item 2 -->
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <i class="fas fa-brain"></i>
-        </div>
-        <div class="timeline-content">
-          <h3>2025 - Building the Brain</h3>
-          <p>
-            We assembled a team of AI wizards, ethical hackers, and design rebels to start building VerifAI’s intelligent core.
-            Real-time face tracking and bio-matching became our daily bread.
-          </p>
-        </div>
-      </div>
-
-      <!-- Timeline Item 3 -->
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <i class="fas fa-users"></i>
-        </div>
-        <div class="timeline-content">
-          <h3>2025 - Real-World Testing</h3>
-          <p>
-            We partnered with early adopters to test VerifAI across job boards, social networks, and dating platforms.
-            Results? Fraudsters got caught slipping. 
-          </p>
-        </div>
-      </div>
-
-      <!-- Timeline Item 4 -->
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <i class="fas fa-shield-alt"></i>
-        </div>
-        <div class="timeline-content">
-          <h3>2026 - Public Launch</h3>
-          <p>
-            VerifAI launched officially. From individuals to businesses, our platform became the digital bouncer for your online spaces.
-            No mask, no scam, no entry.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="founder-section">
-  <div class="pulsing-background"></div>
-
-  <div class="container founder-container">
-    <h2 class="section-title">Meet the Founder</h2>
-    <div class="founder-content">
-      <div class="founder-text">
-        <h3>From Curiosity to Clarity</h3>
-        <p>
-          VerifAI began as a curious side project by a developer who noticed how easily identities were faked online. 
-          Frustrated by the increasing cases of digital impersonation and catfishing, he set out to build a tool that could 
-          verify identities in real-time. What started as a late-night experiment became a movement—a mission to make 
-          the internet a safer place. Today, VerifAI helps individuals and businesses detect fraud, expose impersonators, 
-          and build trust in a noisy digital world.
+    <!-- WHAT WE DO SECTION -->
+    <section class="what-we-do-section py-5" id="what-we-do">
+      <div class="container text-center">
+        <h2 class="mb-4">What We Do</h2>
+        <p class="mb-5 text-muted">
+          VerifAI simplifies identity verification across digital platforms with
+          powerful AI tools.
         </p>
-        <p>
-          The journey wasn’t easy—building a face-tracking system that works across platforms, integrating bio comparison logic, 
-          and maintaining user trust required passion, persistence, and a few cups of midnight coffee. But the goal remains clear: 
-          to redefine digital safety, one face at a time.
+
+        <div class="row">
+          <!-- Face Verification -->
+          <div class="col-md-4 mb-4">
+            <div class="icon-box p-4 shadow-sm rounded-4 h-100 wow fadeInUp">
+              <div class="icon mb-3">
+                <i
+                  class="fas fa-user-check fa-3x text-primary animate-bounce"
+                ></i>
+              </div>
+              <h5>Face Verification</h5>
+              <p>
+                We use AI-powered face recognition to verify real identities
+                behind profiles and prevent impersonation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bio Matching -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="icon-box p-4 shadow-sm rounded-4 h-100 wow fadeInUp"
+              data-wow-delay="0.2s"
+            >
+              <div class="icon mb-3">
+                <i class="fas fa-id-badge fa-3x text-success animate-zoom"></i>
+              </div>
+              <h5>Bio Matching</h5>
+              <p>
+                Our system compares user bios across platforms to detect
+                inconsistencies and possible identity theft.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fraud Detection -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="icon-box p-4 shadow-sm rounded-4 h-100 wow fadeInUp"
+              data-wow-delay="0.4s"
+            >
+              <div class="icon mb-3">
+                <i
+                  class="fas fa-shield-alt fa-3x text-danger animate-pulse"
+                ></i>
+              </div>
+              <h5>Fraud Detection</h5>
+              <p>
+                We flag suspicious profiles and activities using smart
+                algorithms and cross-platform analysis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="timeline-section" id="verifai-timeline">
+      <div class="container">
+        <h2 class="section-title">Our Journey</h2>
+        <p class="section-subtitle">
+          From humble beginnings to AI-powered verification, here’s how VerifAI
+          came to life.
         </p>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>2025 - The Spark</h3>
+              <p>
+                It all started with a simple idea: "What if people could
+                instantly verify online identities without playing detective?"
+                From deep fakes to social fraud, we knew the internet needed a
+                smarter guardian.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>2025 - Building the Brain</h3>
+              <p>
+                We assembled a team of AI wizards, ethical hackers, and design
+                rebels to start building VerifAI’s intelligent core. Real-time
+                face tracking and bio-matching became our daily bread.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>2025 - Real-World Testing</h3>
+              <p>
+                We partnered with early adopters to test VerifAI across job
+                boards, social networks, and dating platforms. Results?
+                Fraudsters got caught slipping.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>2026 - Public Launch</h3>
+              <p>
+                VerifAI launched officially. From individuals to businesses, our
+                platform became the digital bouncer for your online spaces. No
+                mask, no scam, no entry.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="founder-img">
-        <img src="Images/dee.jpg" alt="Founder Image" />
+    </section>
+
+    <section class="founder-section">
+      <div class="pulsing-background"></div>
+
+      <div class="container founder-container">
+        <h2 class="section-title">Meet the Founder</h2>
+        <div class="founder-content">
+          <div class="founder-text">
+            <h3>From Curiosity to Clarity</h3>
+            <p>
+              VerifAI began as a curious side project by a developer who noticed
+              how easily identities were faked online. Frustrated by the
+              increasing cases of digital impersonation and catfishing, he set
+              out to build a tool that could verify identities in real-time.
+              What started as a late-night experiment became a movement—a
+              mission to make the internet a safer place. Today, VerifAI helps
+              individuals and businesses detect fraud, expose impersonators, and
+              build trust in a noisy digital world.
+            </p>
+            <p>
+              The journey wasn’t easy—building a face-tracking system that works
+              across platforms, integrating bio comparison logic, and
+              maintaining user trust required passion, persistence, and a few
+              cups of midnight coffee. But the goal remains clear: to redefine
+              digital safety, one face at a time.
+            </p>
+          </div>
+          <div class="founder-img">
+            <img src="Images/dee.jpg" alt="Founder Image" />
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <section class="core-values-section py-5" id="our-mission">
+      <div class="container text-center">
+        <h2 class="section-title mb-4">Our Mission & Core Values</h2>
+        <p class="section-subtitle mb-5">
+          At VerifAI, we're committed to building a safer digital world—where
+          identity is secure, fraud is exposed, and trust is redefined using
+          cutting-edge AI.
+        </p>
 
+        <div class="row">
+          <!-- Mission -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="value-card shadow-sm p-4 rounded wow fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <div class="icon mb-3">
+                <i class="fas fa-bullseye fa-2x text-primary"></i>
+              </div>
+              <h5 class="value-title">Our Mission</h5>
+              <p class="value-text">
+                To empower individuals and organizations with tools to verify,
+                detect, and protect digital identities using face tracking,
+                bio-matching, and intelligent data analysis.
+              </p>
+            </div>
+          </div>
 
+          <!-- Trust -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="value-card shadow-sm p-4 rounded wow fadeInUp"
+              data-wow-delay="0.3s"
+            >
+              <div class="icon mb-3">
+                <i class="fas fa-handshake fa-2x text-success"></i>
+              </div>
+              <h5 class="value-title">Trust</h5>
+              <p class="value-text">
+                We build technology that earns confidence—by prioritizing
+                transparency, accountability, and real-world impact in digital
+                verification.
+              </p>
+            </div>
+          </div>
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
+          <!-- Innovation -->
+          <div class="col-md-4 mb-4">
+            <div
+              class="value-card shadow-sm p-4 rounded wow fadeInUp"
+              data-wow-delay="0.5s"
+            >
+              <div class="icon mb-3">
+                <i class="fas fa-lightbulb fa-2x text-warning"></i>
+              </div>
+              <h5 class="value-title">Innovation</h5>
+              <p class="value-text">
+                We push boundaries—using AI and data to uncover hidden
+                impersonations and prevent online fraud before it happens.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ======Footer======== -->
 
@@ -398,14 +483,13 @@
         </div>
       </div>
 
+      <!-- Chatbot Toggle Button -->
 
       <!-- Chatbot Toggle Button -->
-           
-  <!-- Chatbot Toggle Button -->
-  <!-- <div id="chat-toggle">&#128172;</div> -->
+      <!-- <div id="chat-toggle">&#128172;</div> -->
 
-  <!-- Chatbot Container -->
-  <!-- <div id="chatbot-container">
+      <!-- Chatbot Container -->
+      <!-- <div id="chatbot-container">
     <div class="chat-header">VerifAI Assistant 🤖</div>
     <div class="chat-body" id="chat-body">
       <div class="bot-message">Hi! Ask me anything about VerifAI.</div>
@@ -415,7 +499,6 @@
       <button id="send-btn">Send</button>
     </div>
   </div> -->
-
 
       <!-- Back to Top -->
       <a
@@ -428,15 +511,6 @@
       </a>
     </footer>
 
-
-
-   
-
-
-
-
-
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -448,5 +522,5 @@
       AOS.init();
     </script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

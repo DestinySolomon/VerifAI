@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .subnav {
   position: fixed;
   top: 0;
@@ -19,6 +18,8 @@ html {
 body {
   padding-top: 80px; /* Push body content down so it's not hidden behind navbar */
 }
+
+
 
 /* Scroll effect styling */
 .sub-nav.scrolled,
@@ -38,6 +39,19 @@ body {
     width: 100%;
     z-index: 1050; /* Make sure it stays above everything */
   }
+.navbar-toggler-icon{
+  position: absolute;
+  top: 14px;
+  right: 20px;
+ 
+}
+
+.navbar-toggler{
+ width: 10%;
+ height: 4vh;
+
+}
+  
 }
 
 .navbar-toggler-icon {
@@ -489,115 +503,114 @@ textarea {
 /* ====About Page===== */
 /* Hero Section Styling */
 
+.about-hero-section {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  overflow-x: hidden;
+}
 
-  .about-hero-section {
-    padding: 80px 20px;
-    background: #f9f9f9;
-    overflow-x: hidden;
-    
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  animation: slideInLeft 1s ease forwards;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #3b7197;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  background-color: #3b7197;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background-color: #74bde0;
+  color: #fff;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  max-width: 500px;
+  animation: slideInRight 1s ease forwards;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
   }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
   .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
   }
 
-  .hero-text {
-    flex: 1 1 500px;
-    animation: slideInLeft 1s ease forwards;
+  .hero-text,
+  .hero-image {
+    animation: none; /* Optional: Disable animation on small screens */
   }
 
   .hero-title {
-    font-size: 3rem;
-    color: #3B7197;
-    margin-bottom: 20px;
-    line-height: 1.3;
+    font-size: 2.4rem;
   }
 
   .hero-subtitle {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.8;
-    margin-bottom: 30px;
+    font-size: 1rem;
   }
 
   .hero-btn {
-    background-color: #3B7197;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    text-decoration: none;
+    padding: 10px 20px;
   }
-
-  .hero-btn:hover {
-    background-color: #74BDE0;
-    color: #fff;
-  }
-
-  .hero-image {
-    flex: 1 1 400px;
-    max-width: 500px;
-    animation: slideInRight 1s ease forwards;
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Animations */
-  @keyframes slideInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slideInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  /* Responsive */
-  @media (max-width: 991px) {
-    .hero-container {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .hero-text, .hero-image {
-      animation: none; /* Optional: Disable animation on small screens */
-    }
-
-    .hero-title {
-      font-size: 2.4rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-    }
-
-    .hero-btn {
-      padding: 10px 20px;
-    }
-  }
+}
 
 /* =====What we do section====== */
 
@@ -614,18 +627,35 @@ textarea {
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes zoomIn {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.8; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
 }
 /* =====Our journey section===== */
 
@@ -665,19 +695,19 @@ textarea {
 }
 
 .timeline-icon {
-  background-color: #3B7197;
+  background-color: #3b7197;
   color: #fff;
   border-radius: 50%;
   padding: 16px;
   margin-right: 20px;
   font-size: 1.4rem;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-content h3 {
   margin-top: 0;
-  color: #3B7197;
+  color: #3b7197;
   font-size: 1.4rem;
 }
 
@@ -734,11 +764,16 @@ textarea {
 
 .pulsing-background {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 40%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(ellipse, rgba(4, 161, 234, 0.3), rgba(15, 189, 238, 0.628),  transparent 90%);
+  background: radial-gradient(
+    ellipse,
+    rgba(4, 161, 234, 0.3),
+    rgba(15, 189, 238, 0.628),
+    transparent 90%
+  );
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: pulse 5s ease-in-out infinite;
@@ -774,7 +809,7 @@ textarea {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 40px;
-  color: #3B7197;
+  color: #3b7197;
 }
 
 .founder-content {
@@ -809,6 +844,207 @@ textarea {
     flex-direction: column;
   }
 }
+
+/* ========Core values & missions section */
+.core-values-section {
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card {
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.icon {
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}
+
+/* ======Registration form======== */
+
+.google-register {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.google-btn {
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.google-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.or-divider {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.registration-form {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.password-strength {
+  height: 10px;
+  width: 100%;
+  background: #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0%;
+  transition: 0.3s ease-in-out;
+}
+
+.hints {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.hints span {
+  display: block;
+}
+
+.valid {
+  color: green;
+}
+
+.invalid {
+  color: red;
+}
+
+.checkbox {
+  margin: 15px 0;
+}
+
+.checkbox input {
+  margin-right: 10px;
+}
+
+button {
+  width: 100%;
+  background: #3b7197;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #325f7f;
+}
+
+.email-reminder {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+  background: #e9f6ff;
+  padding: 10px;
+  border-left: 4px solid #3b7197;
+}
+
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* Leave room for icon */
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 18px;
+}
+
 
 
 /* ====================== */
