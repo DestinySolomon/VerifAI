@@ -156,11 +156,6 @@
       </div>
     </section>
 
-
-
-
-    
-
     <!-- Matched Profiles Section -->
     <section id="matched-results" class="py-5 px-3">
       <div class="container">
@@ -293,8 +288,6 @@
         </div>
       </div>
     </section>
-
-
 
     <!-- HOW IT WORKS SECTION -->
     <section class="how-it-works py-5">
@@ -473,215 +466,320 @@
         </div>
       </div>
     </section>
-    
-
-
 
     <!-- REPORT SUSPICIOUS USE SECTION -->
-<section class="report-section py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-4">
-      <i class="fas fa-shield-alt fa-3x text-danger mb-2"></i>
-      <h2 class="fw-bold">Report Suspicious Use</h2>
-      <p class="text-muted">Think you've found a fake profile or impersonator? Let us know so we can take action!</p>
-    </div>
+    <section class="report-section py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-4">
+          <i class="fas fa-shield-alt fa-3x text-danger mb-2"></i>
+          <h2 class="fw-bold">Report Suspicious Use</h2>
+          <p class="text-muted">
+            Think you've found a fake profile or impersonator? Let us know so we
+            can take action!
+          </p>
+        </div>
 
-    <form class="row g-3 justify-content-center">
-      <div class="col-md-6">
-        <label for="platform" class="form-label">Platform</label>
-        <select id="platform" class="form-select" required>
-          <option selected disabled value="">Choose...</option>
-          <option>Facebook</option>
-          <option>Instagram</option>
-          <option>Twitter/X</option>
-          <option>TikTok</option>
-          <option>LinkedIn</option>
-          <option>Other</option>
-        </select>
+        <form class="row g-3 justify-content-center">
+          <div class="col-md-6">
+            <label for="platform" class="form-label">Platform</label>
+            <select id="platform" class="form-select" required>
+              <option selected disabled value="">Choose...</option>
+              <option>Facebook</option>
+              <option>Instagram</option>
+              <option>Twitter/X</option>
+              <option>TikTok</option>
+              <option>LinkedIn</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="profileLink" class="form-label"
+              >Suspicious Profile Link</label
+            >
+            <input
+              type="url"
+              class="form-control"
+              id="profileLink"
+              placeholder="https://example.com/fake-user"
+              required
+            />
+          </div>
+
+          <div class="col-12">
+            <label for="reason" class="form-label"
+              >Why do you suspect this?</label
+            >
+            <textarea
+              class="form-control"
+              id="reason"
+              rows="3"
+              placeholder="Give us some details..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-danger px-5">
+              Report Now
+            </button>
+          </div>
+
+          <div class="col-12 text-center mt-3">
+            <small class="text-muted"
+              ><i class="fas fa-lock me-1"></i>Your report is 100% confidential
+              and helps improve community safety.</small
+            >
+          </div>
+        </form>
       </div>
+    </section>
 
-      <div class="col-md-6">
-        <label for="profileLink" class="form-label">Suspicious Profile Link</label>
-        <input type="url" class="form-control" id="profileLink" placeholder="https://example.com/fake-user" required>
-      </div>
-
-      <div class="col-12">
-        <label for="reason" class="form-label">Why do you suspect this?</label>
-        <textarea class="form-control" id="reason" rows="3" placeholder="Give us some details..." required></textarea>
-      </div>
-
-      <div class="col-12 text-center">
-        <button type="submit" class="btn btn-danger px-5">Report Now</button>
-      </div>
-
-      <div class="col-12 text-center mt-3">
-        <small class="text-muted"><i class="fas fa-lock me-1"></i>Your report is 100% confidential and helps improve community safety.</small>
-      </div>
-    </form>
-  </div>
-</section>
-
-
-
-<!-- Floating Chatbot Button -->
-<div class="chatbot-container">
+    <!-- Floating Chatbot Button -->
+    <!-- <div class="chatbot-container">
   <button id="chatbotToggle" class="chatbot-btn">
     💬
-  </button>
+  </button> -->
 
-  <!-- Chatbot Window -->
-  <div id="chatbotWindow" class="chatbot-window">
+    <!-- Chatbot Window -->
+    <!-- <div id="chatbotWindow" class="chatbot-window">
     <div class="chatbot-header">
       <h5>VerifAI Assistant</h5>
       <span id="closeChat" class="close-chat">&times;</span>
     </div>
     <div class="chatbot-messages">
-      <p><strong>iBot:</strong> Hi there! Need help verifying an image or reporting fraud?</p>
+      <p><strong>Bot:</strong> Hi there! Need help verifying an image or reporting fraud?</p>
     </div>
     <div class="chatbot-input">
       <input type="text" placeholder="Type your message..." />
       <button>Send</button>
     </div>
   </div>
-</div>
+</div> -->
 
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
 
-<!-- FAQ Section -->
-<section id="faq" class="py-5 bg-light">
-  <div class="container" data-aos="fade-up">
-    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeadingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqCollapseOne"
+                aria-expanded="true"
+                aria-controls="faqCollapseOne"
+              >
+                What does VerifAI actually do?
+              </button>
+            </h2>
+            <div
+              id="faqCollapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="faqHeadingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                VerifAI scans user profile photos across platforms to detect
+                impersonations or misuse. Think of it as your AI bodyguard for
+                identity fraud prevention.
+              </div>
+            </div>
+          </div>
 
-    <div class="accordion" id="faqAccordion">
-      <!-- FAQ 1 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeadingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
-            What does VerifAI actually do?
-          </button>
-        </h2>
-        <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            VerifAI scans user profile photos across platforms to detect impersonations or misuse. Think of it as your AI bodyguard for identity fraud prevention.
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeadingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqCollapseTwo"
+                aria-expanded="false"
+                aria-controls="faqCollapseTwo"
+              >
+                How are scam scores determined?
+              </button>
+            </h2>
+            <div
+              id="faqCollapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="faqHeadingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                If an image is used on multiple profiles with inconsistent bio
+                data, the scam score increases. A high score = 🚨potential fraud
+                alert!
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeadingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqCollapseThree"
+                aria-expanded="false"
+                aria-controls="faqCollapseThree"
+              >
+                Is VerifAI connected to law enforcement?
+              </button>
+            </h2>
+            <div
+              id="faqCollapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="faqHeadingThree"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Not directly. We empower users with information. You can report
+                results, and our team may escalate repeated misuse patterns.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-4 position-relative">
+      <div class="container">
+        <div class="row">
+          <!-- Company Info -->
+          <div class="col-md-3 mb-4" data-aos="fade-up">
+            <h5 class="text-uppercase fw-bold">VerifAI</h5>
+            <p>
+              Protecting digital identities. Stop impersonation. Stay safe
+              online.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h6 class="text-uppercase fw-bold">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >How it Works</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Testimonials</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h6 class="text-uppercase fw-bold">Legal</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Terms of Use</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <p><i class="fas fa-envelope me-2"></i> support@verifai.com</p>
+            <p><i class="fas fa-phone me-2"></i> +234 123 456 7890</p>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <h6 class="text-uppercase fw-bold">Subscribe</h6>
+            <p>Join our premium plan for real-time alerts and deeper scans.</p>
+            <form>
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your email"
+                  required
+                />
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <hr class="mb-4" />
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="mb-0">
+              &copy; <span id="year"></span> VerifAI. All Rights Reserved.
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- FAQ 2 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeadingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
-            How are scam scores determined?
-          </button>
-        </h2>
-        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            If an image is used on multiple profiles with inconsistent bio data, the scam score increases. A high score = 🚨potential fraud alert!
-          </div>
-        </div>
-      </div>
 
-      <!-- FAQ 3 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeadingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
-            Is VerifAI connected to law enforcement?
-          </button>
-        </h2>
-        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Not directly. We empower users with information. You can report results, and our team may escalate repeated misuse patterns.
-          </div>
-        </div>
-      </div>
+      <!-- Chatbot Toggle Button -->
+           
+  <!-- Chatbot Toggle Button -->
+  <div id="chat-toggle">&#128172;</div>
+
+  <!-- Chatbot Container -->
+  <div id="chatbot-container">
+    <div class="chat-header">VerifAI Assistant 🤖</div>
+    <div class="chat-body" id="chat-body">
+      <div class="bot-message">Hi! Ask me anything about VerifAI.</div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Type your question..." />
+      <button id="send-btn">Send</button>
     </div>
   </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<footer class="bg-dark text-white pt-5 pb-4 position-relative">
-  <div class="container">
-    <div class="row">
-      
-      <!-- Company Info -->
-      <div class="col-md-3 mb-4" data-aos="fade-up">
-        <h5 class="text-uppercase fw-bold">VerifAI</h5>
-        <p>Protecting digital identities. Stop impersonation. Stay safe online.</p>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <h6 class="text-uppercase fw-bold">Quick Links</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-white text-decoration-none footer-link">Home</a></li>
-          <li><a href="#" class="text-white text-decoration-none footer-link">Features</a></li>
-          <li><a href="#" class="text-white text-decoration-none footer-link">How it Works</a></li>
-          <li><a href="#" class="text-white text-decoration-none footer-link">Testimonials</a></li>
-        </ul>
-      </div>
-
-      <!-- Legal -->
-      <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <h6 class="text-uppercase fw-bold">Legal</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-white text-decoration-none footer-link">Privacy Policy</a></li>
-          <li><a href="#" class="text-white text-decoration-none footer-link">Terms of Use</a></li>
-          <li><a href="#" class="text-white text-decoration-none footer-link">Cookie Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <h6 class="text-uppercase fw-bold">Contact</h6>
-        <p><i class="fas fa-envelope me-2"></i> support@verifai.com</p>
-        <p><i class="fas fa-phone me-2"></i> +234 123 456 7890</p>
-      </div>
-
-      <!-- Newsletter -->
-      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-        <h6 class="text-uppercase fw-bold">Subscribe</h6>
-        <p>Join our premium plan for real-time alerts and deeper scans.</p>
-        <form>
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Your email" required>
-            <button class="btn btn-primary" type="submit">Subscribe</button>
-          </div>
-        </form>
-      </div>
-
-    </div>
-
-    <hr class="mb-4">
-
-    <div class="row text-center">
-      <div class="col-12">
-        <p class="mb-0">&copy; <span id="year"></span> VerifAI. All Rights Reserved.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Back to Top -->
-  <a href="#" class="position-absolute bottom-0 end-0 m-3 btn btn-primary rounded-circle shadow" id="backToTop" title="Back to Top">
-    <i class="fas fa-chevron-up"></i>
-  </a>
-</footer>
-
+      <!-- Back to Top -->
+      <a
+        href="#"
+        class="position-absolute bottom-0 end-0 m-3 btn btn-primary rounded-circle shadow"
+        id="backToTop"
+        title="Back to Top"
+      >
+        <i class="fas fa-chevron-up"></i>
+      </a>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init();
