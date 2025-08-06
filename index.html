@@ -24,23 +24,27 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- RESPONSIVE SUB NAV -->
-    <div
-      class="subnav px-4 py-2 text-white"
-      style="background-color: #74bde0; font-size: 0.9rem"
-    >
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
-            <i class="fas fa-envelope"></i> support@verifai.com &nbsp; | &nbsp;
-            <i class="fas fa-phone"></i> +234-800-123-4567
-          </div>
-          <div class="col-12 col-md-6 text-center text-md-end">
-            <i class="fas fa-map-marker-alt"></i> Uyo, Nigeria
-          </div>
+   <!-- RESPONSIVE SUB NAV -->
+<div class="subnav px-3 py-2 text-white" style="background-color: #74bde0; font-size: 0.9rem;">
+  <div class="container-fluid">
+    <div class="row align-items-center text-center text-md-start">
+      <!-- Contact Info -->
+      <div class="col-12 col-md-6 mb-2 mb-md-0">
+        <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start gap-2">
+          <span><i class="fas fa-envelope"></i> support@verifai.com</span>
+          <span class="d-none d-md-inline">|</span>
+          <span><i class="fas fa-phone"></i> +234-800-123-4567</span>
         </div>
       </div>
+
+      <!-- Location Info -->
+      <div class="col-12 col-md-6 text-center text-md-end">
+        <span><i class="fas fa-map-marker-alt"></i> Uyo, Nigeria</span>
+      </div>
     </div>
+  </div>
+</div>
+
 
     <!-- MAIN NAVBAR -->
     <nav class="navbar navbar-expand-lg" style="background-color: #3b7197">
@@ -556,6 +560,127 @@
     </div>
   </div>
 </div> -->
+
+
+<!-- Search Bar -->
+<div class="container my-4">
+  <input
+    type="text"
+    id="searchInput"
+    class="form-control"
+    placeholder="Search by platform, name or confidence score..."
+  />
+</div>
+
+<!-- Cards Container -->
+
+<div class="container">
+  <div class="row" id="cardContainer">
+    <!-- CARD 1 -->
+    <div class="col-md-6 col-lg-4 mb-4 verification-card">
+      <div class="card h-100 shadow-sm">
+        <img src="Images/tina.jpg" class="card-img-top" alt="Verified Face">
+        <div class="card-body">
+          <h6 class="card-title">Date: Aug 4, 2025</h6>
+          <p>Platforms Searched: 3</p>
+          <p>Confidence Score: 62%</p>
+          <p><span class="badge bg-warning text-dark">⚠️ Partial Match</span></p>
+
+          <!-- Matched Bios -->
+          <div>
+            <button class="btn btn-success btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#matched1">Matching Bios (2)</button>
+            <div class="collapse" id="matched1">
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Facebook:</strong> Tom A</li>
+                <li class="list-group-item"><strong>X:</strong> Tom A</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Mismatched Bios -->
+          <div>
+            <button class="btn btn-danger btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#mismatched1">Mismatched Bios (1)</button>
+            <div class="collapse" id="mismatched1">
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Instagram:</strong> Tony Allen</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+<!-- CARD 2 - Fixed -->
+<div class="col-md-6 col-lg-4 mb-4 verification-card">
+  <div class="card h-100 shadow-sm">
+    <img src="Images/linda.jpg" class="card-img-top" alt="Verified Face">
+    <div class="card-body">
+      <h6 class="card-title">Date: Aug 3, 2025</h6>
+      <p>Platforms Searched: 4</p>
+      <p>Confidence Score: 97%</p>
+      <p><span class="badge bg-success">✅ Verified</span></p>
+      <small class="text-muted">Minor name variations detected.</small>
+
+      <div>
+        <button class="btn btn-success btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#matched2">Matching Bios (2)</button>
+        <div class="collapse" id="matched2">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>LinkedIn:</strong> Sarah J.</li>
+            <li class="list-group-item"><strong>X:</strong> Sarah J.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn btn-warning btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#mismatched2">Minor Variants (2)</button>
+        <div class="collapse" id="mismatched2">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Instagram:</strong> Sarah Jane</li>
+            <li class="list-group-item"><strong>Facebook:</strong> Jane S.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- CARD 3 -->
+    <div class="col-md-6 col-lg-4 mb-4 verification-card">
+      <div class="card h-100 shadow-sm">
+        <img src="Images/ahmed.jpg" class="card-img-top" alt="Verified Face">
+        <div class="card-body">
+          <h6 class="card-title">Date: Aug 2, 2025</h6>
+          <p>Platforms Searched: 2</p>
+          <p>Confidence Score: 87%</p>
+          <p><span class="badge bg-success">✅ Verified</span></p>
+
+          <div>
+            <button class="btn btn-success btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#matched3">Matching Bios (1)</button>
+            <div class="collapse" id="matched3">
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Twitter:</strong> Max D.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <button class="btn btn-danger btn-sm mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#mismatched3">Mismatched Bios (1)</button>
+            <div class="collapse" id="mismatched3">
+              <ul class="list-group">
+                <li class="list-group-item"><strong>Instagram:</strong> Max Don</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat for cards 4–8 as needed -->
+  </div>
+</div>
+
+
 
     <!-- FAQ Section -->
     <section id="faq" class="py-5 bg-light">

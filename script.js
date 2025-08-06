@@ -127,6 +127,27 @@ userInput.addEventListener('keypress', e => {
 
 
 
+
+
+
+//history section
+
+
+
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".verification-card");
+
+  searchInput.addEventListener("input", function () {
+    const searchText = searchInput.value.toLowerCase();
+
+    cards.forEach((card) => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(searchText) ? "block" : "none";
+    });
+  });
+
+
+
 // Footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
