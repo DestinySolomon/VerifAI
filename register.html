@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -20,31 +20,34 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
     />
-  <title>Verifai</title>
-</head>
-<body>
-   
-   <!-- RESPONSIVE SUB NAV -->
-<div class="subnav px-3 py-2 text-white" style="background-color: #74bde0; font-size: 0.9rem;">
-  <div class="container-fluid">
-    <div class="row align-items-center text-center text-md-start">
-      <!-- Contact Info -->
-      <div class="col-12 col-md-6 mb-2 mb-md-0">
-        <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start gap-2">
-          <span><i class="fas fa-envelope"></i> support@verifai.com</span>
-          <span class="d-none d-md-inline">|</span>
-          <span><i class="fas fa-phone"></i> +234-800-123-4567</span>
+    <title>Verifai</title>
+  </head>
+  <body>
+    <!-- RESPONSIVE SUB NAV -->
+    <div
+      class="subnav px-3 py-2 text-white"
+      style="background-color: #74bde0; font-size: 0.9rem"
+    >
+      <div class="container-fluid">
+        <div class="row align-items-center text-center text-md-start">
+          <!-- Contact Info -->
+          <div class="col-12 col-md-6 mb-2 mb-md-0">
+            <div
+              class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start gap-2"
+            >
+              <span><i class="fas fa-envelope"></i> support@verifai.com</span>
+              <span class="d-none d-md-inline">|</span>
+              <span><i class="fas fa-phone"></i> +234-800-123-4567</span>
+            </div>
+          </div>
+
+          <!-- Location Info -->
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <span><i class="fas fa-map-marker-alt"></i> Uyo, Nigeria</span>
+          </div>
         </div>
       </div>
-
-      <!-- Location Info -->
-      <div class="col-12 col-md-6 text-center text-md-end">
-        <span><i class="fas fa-map-marker-alt"></i> Uyo, Nigeria</span>
-      </div>
     </div>
-  </div>
-</div>
-
 
     <!-- MAIN NAVBAR -->
     <nav class="navbar navbar-expand-lg" style="background-color: #3b7197">
@@ -75,14 +78,15 @@
             <li class="nav-item">
               <a class="nav-link text-white active" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="history.html">History</a>
-            </li>
+
             <li class="nav-item">
               <a class="nav-link text-white" href="verify.html">Verify</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white active" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="faq.html">FAQ</a>
             </li>
           </ul>
 
@@ -104,82 +108,98 @@
                 aria-labelledby="userDropdown"
               >
                 <li><a class="dropdown-item" href="login.html">Login</a></li>
-                <li><a class="dropdown-item" href="register.html">Register</a></li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Register</a>
+                </li>
               </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-  
-<form class="registration-form" id="registerForm">
-  <h2>Create Your Account</h2>
 
-  <!-- Google Register Option -->
-  <div class="google-register">
-    <button type="button" class="google-btn">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google icon" width="20">
-      Register with Google
-    </button>
-    <p class="or-divider">— or —</p>
-  </div>
+    <form class="registration-form" id="registerForm">
+      <h2>Create Your Account</h2>
 
-  <!-- Full Name -->
-  <label for="fullname">Full Name</label>
-  <input type="text" id="fullname" required>
+      <!-- Google Register Option -->
+      <div class="google-register">
+        <button type="button" class="google-btn">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+            alt="Google icon"
+            width="20"
+          />
+          Register with Google
+        </button>
+        <p class="or-divider">— or —</p>
+      </div>
 
-  <!-- Email -->
-  <label for="email">Email Address</label>
-  <input type="email" id="email" required>
+      <!-- Full Name -->
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" required />
 
-  <!-- Password -->
-  <label for="password">Password</label>
-  <div class="input-wrapper">
-    <input type="password" id="password" placeholder="Create a strong password" required>
-    <span class="toggle-password" onclick="togglePassword('password', this)">👁️</span>
-  </div>
+      <!-- Email -->
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required />
 
-  <!-- Password Strength Bar -->
-  <div class="password-strength">
-    <div class="strength-bar" id="strengthBar"></div>
-  </div>
+      <!-- Password -->
+      <label for="password">Password</label>
+      <div class="input-wrapper">
+        <input
+          type="password"
+          id="password"
+          placeholder="Create a strong password"
+          required
+        />
+        <span class="toggle-password" onclick="togglePassword('password', this)"
+          >👁️</span
+        >
+      </div>
 
-  <!-- Password Hints -->
-  <div class="hints" id="passwordHints">
-    <span id="length" class="invalid">❌ At least 8 characters</span>
-    <span id="uppercase" class="invalid">❌ One uppercase letter</span>
-    <span id="lowercase" class="invalid">❌ One lowercase letter</span>
-    <span id="number" class="invalid">❌ One number</span>
-    <span id="special" class="invalid">❌ One special character</span>
-  </div>
+      <!-- Password Strength Bar -->
+      <div class="password-strength">
+        <div class="strength-bar" id="strengthBar"></div>
+      </div>
 
-  <!-- Confirm Password -->
-  <label for="confirmPassword">Confirm Password</label>
-  <div class="input-wrapper">
-    <input type="password" id="confirmPassword" required>
-    <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">👁️</span>
-  </div>
+      <!-- Password Hints -->
+      <div class="hints" id="passwordHints">
+        <span id="length" class="invalid">❌ At least 8 characters</span>
+        <span id="uppercase" class="invalid">❌ One uppercase letter</span>
+        <span id="lowercase" class="invalid">❌ One lowercase letter</span>
+        <span id="number" class="invalid">❌ One number</span>
+        <span id="special" class="invalid">❌ One special character</span>
+      </div>
 
-  <!-- Privacy Policy Agreement -->
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" required>
-      I agree to the <a href="#">Privacy Policy</a> & <a href="#">Terms of Service</a>
-    </label>
-  </div>
+      <!-- Confirm Password -->
+      <label for="confirmPassword">Confirm Password</label>
+      <div class="input-wrapper">
+        <input type="password" id="confirmPassword" required />
+        <span
+          class="toggle-password"
+          onclick="togglePassword('confirmPassword', this)"
+          >👁️</span
+        >
+      </div>
 
-  <!-- Submit Button -->
-  <button type="submit">Create Account</button>
+      <!-- Privacy Policy Agreement -->
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" required />
+          I agree to the <a href="#">Privacy Policy</a> &
+          <a href="#">Terms of Service</a>
+        </label>
+      </div>
 
-  <!-- Email Verification Message -->
-  <div class="email-reminder">
-    📩 Check your email to verify your account.  
-    Verification is needed to unlock all features.  
-    Don’t worry, it takes less than 2 minutes.  
-    We’ll be right here when you’re done. 🚀
-  </div>
-</form>
+      <!-- Submit Button -->
+      <button type="submit">Create Account</button>
 
+      <!-- Email Verification Message -->
+      <div class="email-reminder">
+        📩 Check your email to verify your account. Verification is needed to
+        unlock all features. Don’t worry, it takes less than 2 minutes. We’ll be
+        right here when you’re done. 🚀
+      </div>
+    </form>
 
     <!-- ======Footer======== -->
 
@@ -280,14 +300,13 @@
         </div>
       </div>
 
+      <!-- Chatbot Toggle Button -->
 
       <!-- Chatbot Toggle Button -->
-           
-  <!-- Chatbot Toggle Button -->
-  <!-- <div id="chat-toggle">&#128172;</div> -->
+      <!-- <div id="chat-toggle">&#128172;</div> -->
 
-  <!-- Chatbot Container -->
-  <!-- <div id="chatbot-container">
+      <!-- Chatbot Container -->
+      <!-- <div id="chatbot-container">
     <div class="chat-header">VerifAI Assistant 🤖</div>
     <div class="chat-body" id="chat-body">
       <div class="bot-message">Hi! Ask me anything about VerifAI.</div>
@@ -297,7 +316,6 @@
       <button id="send-btn">Send</button>
     </div>
   </div> -->
-
 
       <!-- Back to Top -->
       <a
@@ -310,84 +328,66 @@
       </a>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script>
-    const password = document.getElementById('password');
-    const strengthBar = document.getElementById('strengthBar');
-    const hints = {
-      length: document.getElementById('length'),
-      uppercase: document.getElementById('uppercase'),
-      lowercase: document.getElementById('lowercase'),
-      number: document.getElementById('number'),
-      special: document.getElementById('special'),
-    };
-
-    password.addEventListener('input', () => {
-      const val = password.value;
-      let strength = 0;
-
-      const checks = {
-        length: val.length >= 8,
-        uppercase: /[A-Z]/.test(val),
-        lowercase: /[a-z]/.test(val),
-        number: /[0-9]/.test(val),
-        special: /[!@#$%^&*(),.?":{}|<>]/.test(val),
+      const password = document.getElementById("password");
+      const strengthBar = document.getElementById("strengthBar");
+      const hints = {
+        length: document.getElementById("length"),
+        uppercase: document.getElementById("uppercase"),
+        lowercase: document.getElementById("lowercase"),
+        number: document.getElementById("number"),
+        special: document.getElementById("special"),
       };
 
-      for (const key in checks) {
-        if (checks[key]) {
-          hints[key].classList.remove('invalid');
-          hints[key].classList.add('valid');
-          hints[key].innerText = `✅ ${hints[key].innerText.slice(2)}`;
-          strength++;
+      password.addEventListener("input", () => {
+        const val = password.value;
+        let strength = 0;
+
+        const checks = {
+          length: val.length >= 8,
+          uppercase: /[A-Z]/.test(val),
+          lowercase: /[a-z]/.test(val),
+          number: /[0-9]/.test(val),
+          special: /[!@#$%^&*(),.?":{}|<>]/.test(val),
+        };
+
+        for (const key in checks) {
+          if (checks[key]) {
+            hints[key].classList.remove("invalid");
+            hints[key].classList.add("valid");
+            hints[key].innerText = `✅ ${hints[key].innerText.slice(2)}`;
+            strength++;
+          } else {
+            hints[key].classList.remove("valid");
+            hints[key].classList.add("invalid");
+            hints[key].innerText = `❌ ${hints[key].innerText.slice(2)}`;
+          }
+        }
+
+        // Strength bar logic
+        strengthBar.style.width = `${(strength / 5) * 100}%`;
+        if (strength <= 2) {
+          strengthBar.style.background = "red";
+        } else if (strength === 3 || strength === 4) {
+          strengthBar.style.background = "orange";
         } else {
-          hints[key].classList.remove('valid');
-          hints[key].classList.add('invalid');
-          hints[key].innerText = `❌ ${hints[key].innerText.slice(2)}`;
+          strengthBar.style.background = "green";
+        }
+      });
+    </script>
+
+    <script>
+      function togglePassword(fieldId, btn) {
+        const input = document.getElementById(fieldId);
+        if (input.type === "password") {
+          input.type = "text";
+          btn.textContent = "🙈";
+        } else {
+          input.type = "password";
+          btn.textContent = "👁️";
         }
       }
-
-      // Strength bar logic
-      strengthBar.style.width = `${(strength / 5) * 100}%`;
-      if (strength <= 2) {
-        strengthBar.style.background = 'red';
-      } else if (strength === 3 || strength === 4) {
-        strengthBar.style.background = 'orange';
-      } else {
-        strengthBar.style.background = 'green';
-      }
-    });
-  </script>
-
-  <script>
-  function togglePassword(fieldId, btn) {
-    const input = document.getElementById(fieldId);
-    if (input.type === "password") {
-      input.type = "text";
-      btn.textContent = "🙈";
-    } else {
-      input.type = "password";
-      btn.textContent = "👁️";
-    }
-  }
-</script>
-
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -400,7 +400,5 @@
       AOS.init();
     </script>
     <script src="script.js"></script>
-
-
-</body>
+  </body>
 </html>
