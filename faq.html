@@ -3,9 +3,423 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <title>Verifai</title>
+  </head>
 </head>
 <body>
+   <!-- RESPONSIVE SUB NAV -->
+    <div
+      class="subnav px-3 py-2 text-white"
+      style="background-color: #74bde0; font-size: 0.9rem"
+    >
+      <div class="container-fluid">
+        <div class="row align-items-center text-center text-md-start">
+          <!-- Contact Info -->
+          <div class="col-12 col-md-6 mb-2 mb-md-0">
+            <div
+              class="d-flex flex-column flex-md-row justify-content-center justify-content-md-start gap-2"
+            >
+              <span><i class="fas fa-envelope"></i> support@verifai.com</span>
+              <span class="d-none d-md-inline">|</span>
+              <span><i class="fas fa-phone"></i> +234-800-123-4567</span>
+            </div>
+          </div>
+
+          <!-- Location Info -->
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <span><i class="fas fa-map-marker-alt"></i> Uyo, Nigeria</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #3b7197">
+      <div class="container-fluid">
+        <!-- Logo on the left -->
+        <a class="navbar-brand text-white" href="#">VerifAI</a>
+
+        <!-- Mobile hamburger toggle -->
+        <button
+          class="navbar-toggler text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Nav Content -->
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarTogglerDemo02"
+        >
+          <!-- Center Nav Links -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white active" href="index.html">Home</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link text-white" href="register.html">Verify</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white active" href="about.html">About</a>
+            </li>
+
+             <li class="nav-item">
+              <a class="nav-link text-white" href="faq.html">FAQ</a>
+            </li>
+          </ul>
+
+          <!-- User Icon with Dropdown for Login/Register -->
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-user-circle fa-lg"></i>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="userDropdown"
+              >
+                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Register</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<!-- =======FAQ PAGE==== -->
   
+  <div class="faq-header">
+    <h1>Frequently Asked Questions</h1>
+    <p>Your burning questions about VerifAI, answered.</p>
+  </div>
+
+  <div class="container faq-section">
+    <div class="accordion" id="faqAccordion">
+
+      <!-- FAQ Item 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+            What is VerifAI?
+          </button>
+        </h2>
+        <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            VerifAI is an AI-powered tool that helps detect fraud, impersonation, and mismatched identities across online platforms. Basically, it’s your personal lie detector, without the wires.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+            How does VerifAI work?
+          </button>
+        </h2>
+        <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            It analyzes a person’s online presence, images, bios, and behavior using advanced facial recognition and metadata comparison to flag inconsistencies. Smart, right?
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+            Is my data safe with VerifAI?
+          </button>
+        </h2>
+        <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Absolutely. VerifAI doesn't sell, share, or leak your data. We encrypt it like Fort Knox and use it only for verification purposes.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+            What does "⚠️ Partial Match" mean?
+          </button>
+        </h2>
+        <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            It means VerifAI found one mismatch in a user’s bio or platform profile. It’s not a full red flag, but something worth looking into.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">
+            What does "❌ Suspicious" mean?
+          </button>
+        </h2>
+        <div id="a5" class="accordion-collapse collapse" aria-labelledby="q5" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            More than one mismatch was found. In human terms: 🚨 this account needs a deeper look. Fraud alert mode activated.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6" aria-expanded="false" aria-controls="a6">
+            Can I verify multiple people at once?
+          </button>
+        </h2>
+        <div id="a6" class="accordion-collapse collapse" aria-labelledby="q6" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Not yet — but batch verification is coming soon. Think of it as group interrogation, but digital and less creepy.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 7 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a7" aria-expanded="false" aria-controls="a7">
+            Does VerifAI cost money?
+          </button>
+        </h2>
+        <div id="a7" class="accordion-collapse collapse" aria-labelledby="q7" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            It’s free to try. But premium plans (with more scans and detailed reports) are available for investigators, agencies, and digital ninjas.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 8 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a8" aria-expanded="false" aria-controls="a8">
+            How accurate is VerifAI?
+          </button>
+        </h2>
+        <div id="a8" class="accordion-collapse collapse" aria-labelledby="q8" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Very. While no system is 100%, VerifAI boasts a high confidence score thanks to its multi-platform scanning and face-matching AI.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 9 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a9" aria-expanded="false" aria-controls="a9">
+            I got flagged wrongly, what do I do?
+          </button>
+        </h2>
+        <div id="a9" class="accordion-collapse collapse" aria-labelledby="q9" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Don’t panic. Contact support with your verification ID and we’ll review it faster than you can say “AI gone rogue.”
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 10 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q10">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a10" aria-expanded="false" aria-controls="a10">
+            Is VerifAI legal to use?
+          </button>
+        </h2>
+        <div id="a10" class="accordion-collapse collapse" aria-labelledby="q10" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, VerifAI follows all legal and ethical standards. Just don’t use it to stalk your ex — that’s on you.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  
+    <!-- ======Footer======== -->
+
+    <footer class="bg-dark text-white pt-5 pb-4 position-relative">
+      <div class="container">
+        <div class="row">
+          <!-- Company Info -->
+          <div class="col-md-3 mb-4" data-aos="fade-up">
+            <h5 class="text-uppercase fw-bold">VerifAI</h5>
+            <p>
+              Protecting digital identities. Stop impersonation. Stay safe
+              online.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h6 class="text-uppercase fw-bold">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >How it Works</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Testimonials</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h6 class="text-uppercase fw-bold">Legal</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Terms of Use</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none footer-link"
+                  >Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-md-2 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <p><i class="fas fa-envelope me-2"></i> support@verifai.com</p>
+            <p><i class="fas fa-phone me-2"></i> +234 123 456 7890</p>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <h6 class="text-uppercase fw-bold">Subscribe</h6>
+            <p>Join our premium plan for real-time alerts and deeper scans.</p>
+            <form>
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your email"
+                  required
+                />
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <hr class="mb-4" />
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="mb-0">
+              &copy; <span id="year"></span> VerifAI. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chatbot Toggle Button -->
+
+      <!-- Chatbot Toggle Button -->
+      <!-- <div id="chat-toggle">&#128172;</div> -->
+
+      <!-- Chatbot Container -->
+      <!-- <div id="chatbot-container">
+    <div class="chat-header">VerifAI Assistant 🤖</div>
+    <div class="chat-body" id="chat-body">
+      <div class="bot-message">Hi! Ask me anything about VerifAI.</div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Type your question..." />
+      <button id="send-btn">Send</button>
+    </div>
+  </div> -->
+
+      <!-- Back to Top -->
+      <a
+        href="#"
+        class="position-absolute bottom-0 end-0 m-3 btn btn-primary rounded-circle shadow"
+        id="backToTop"
+        title="Back to Top"
+      >
+        <i class="fas fa-chevron-up"></i>
+      </a>
+    </footer>
+
+
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

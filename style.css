@@ -1176,6 +1176,34 @@ input[type="password"] {
   text-decoration: none;
 }
 
+/* =====FAQ PAGE====== */
+
+    .faq-header {
+      background: linear-gradient(to right, #3B7197, #74BDE0);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+    }
+
+    .accordion-button:not(.collapsed) {
+      color: #3B7197;
+      background-color: #e8f4fb;
+      font-weight: 600;
+    }
+
+    .accordion-button:hover {
+      background-color: #d8ecf8;
+    }
+
+    .accordion-body {
+      background-color: #fff;
+    }
+
+    .faq-section {
+      padding: 40px 20px;
+    }
+
 
 
 /* ====================== */
