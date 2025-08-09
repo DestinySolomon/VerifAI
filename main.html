@@ -87,6 +87,29 @@
     </div>
   </nav>
 
+<!-- Start Verification Section -->
+<div class="container my-5">
+  <div class="card shadow border-0 p-4 text-center">
+    <h4 class="fw-bold mb-4">Start Verification</h4>
+
+    <!-- Upload Area -->
+    <div id="upload-area" class="border border-2 border-dashed p-5 rounded bg-light" style="cursor: pointer;">
+      <i class="fas fa-cloud-upload-alt fa-3x text-primary mb-3"></i>
+      <p class="mb-0">Drag & drop a photo here, or click to select</p>
+      <input type="file" id="fileInput" accept="image/*" class="d-none">
+    </div>
+
+    <!-- Preview Area -->
+    <div id="preview-area" class="mt-4 d-none">
+      <img id="preview-img" src="" alt="Preview" class="img-fluid rounded shadow" style="max-height: 300px;">
+      <div class="mt-4">
+        <button id="startVerificationBtn" class="btn btn-gradient px-4 fw-bold">
+          <i class="fas fa-check-circle me-2"></i> Start Verification
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -112,6 +135,74 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Upload Script -->
+<script>
+  const uploadArea = document.getElementById('upload-area');
+  const fileInput = document.getElementById('fileInput');
+  const previewArea = document.getElementById('preview-area');
+  const previewImg = document.getElementById('preview-img');
+  const startVerificationBtn = document.getElementById('startVerificationBtn');
+
+  // Click to upload
+  uploadArea.addEventListener('click', () => fileInput.click());
+
+  // Drag events
+  uploadArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    uploadArea.classList.add('bg-white');
+  });
+
+  uploadArea.addEventListener('dragleave', () => {
+    uploadArea.classList.remove('bg-white');
+  });
+
+  uploadArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    uploadArea.classList.remove('bg-white');
+    handleFile(e.dataTransfer.files[0]);
+  });
+
+  // File input change
+  fileInput.addEventListener('change', () => {
+    handleFile(fileInput.files[0]);
+  });
+
+  // Handle file
+  function handleFile(file) {
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        previewImg.src = e.target.result;
+        previewArea.classList.remove('d-none');
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  // Simulate verification process
+  startVerificationBtn.addEventListener('click', () => {
+    startVerificationBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Verifying...';
+    setTimeout(() => {
+      startVerificationBtn.innerHTML = '<i class="fas fa-check-circle me-2"></i> Verified!';
+      startVerificationBtn.classList.remove('btn-gradient');
+      startVerificationBtn.classList.add('btn-success');
+    }, 2000);
+  });
+</script>
 
 
 

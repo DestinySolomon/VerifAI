@@ -13,6 +13,9 @@
     var(--verifai-sky)
   );
 }
+body {
+  background: linear-gradient(46deg, #4a8db7, #74bde0, #a1e1fa);
+}
 
 body.dark-mode {
   background-color: #121212;
@@ -52,3 +55,20 @@ body.dark-mode {
     display: none !important;
   }
 }
+
+
+
+  .btn-gradient {
+    background: linear-gradient(90deg, #0066ff, #00ccff);
+    color: white;
+    border: none;
+    transition: 0.3s;
+  }
+  .btn-gradient:hover {
+    opacity: 0.9;
+    color: white;
+  }
+  #upload-area.border-dashed {
+    border-style: dashed !important;
+  }
+
