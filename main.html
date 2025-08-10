@@ -10,9 +10,12 @@
       crossorigin="anonymous"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Aubrey&family=Edu+NSW+ACT+Hand+Pre:wght@500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Nova+Square&family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Aubrey&family=Edu+NSW+ACT+Hand+Pre:wght@500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Nova+Square&family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
 
     <link
@@ -25,10 +28,8 @@
       rel="stylesheet"
     />
 
-
     <title>Verifai</title>
   </head>
-
 
   <body class="light-mode">
     <nav class="navbar navbar-expand-lg navbar-verifai px-3">
@@ -45,7 +46,6 @@
             aria-label="Search"
           />
         </form>
-
         <!-- Right Side (Bell + User) -->
         <div class="d-flex align-items-center mobile-nav-end ms-auto">
           <!-- Bell Icon -->
@@ -231,6 +231,58 @@
 
     <!-- Scripts -->
 
+    <script>
+      // Theme toggle logic
+      const themeButtons = document.querySelectorAll(".theme-toggle");
+
+      function setTheme(theme) {
+        if (theme === "dark") {
+          document.body.classList.add("dark-mode");
+          document.body.classList.remove("light-mode");
+          localStorage.setItem("verifai-theme", "dark");
+        } else if (theme === "light") {
+          document.body.classList.add("light-mode");
+          document.body.classList.remove("dark-mode");
+          localStorage.setItem("verifai-theme", "light");
+        } else {
+          // System default
+          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            document.body.classList.add("dark-mode");
+            document.body.classList.remove("light-mode");
+          } else {
+            document.body.classList.add("light-mode");
+            document.body.classList.remove("dark-mode");
+          }
+          localStorage.setItem("verifai-theme", "system");
+        }
+      }
+
+      themeButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          setTheme(btn.dataset.theme);
+        });
+      });
+
+      // On page load, set theme from localStorage or system
+      (function () {
+        const savedTheme = localStorage.getItem("verifai-theme");
+        if (savedTheme) {
+          setTheme(savedTheme);
+        } else {
+          setTheme("system");
+        }
+      })();
+
+      // Listen for system theme changes if system is selected
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (localStorage.getItem("verifai-theme") === "system") {
+            setTheme("system");
+          }
+        });
+    </script>
     <!-- ========= -->
 
     <script>
@@ -377,33 +429,7 @@
         });
     </script>
 
-    <script>
-      // Theme toggle logic
-      const themeButtons = document.querySelectorAll(".theme-toggle");
-
-      themeButtons.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          const theme = btn.dataset.theme;
-          if (theme === "dark") {
-            document.body.classList.add("dark-mode");
-            document.body.classList.remove("light-mode");
-          } else if (theme === "light") {
-            document.body.classList.add("light-mode");
-            document.body.classList.remove("dark-mode");
-          } else {
-            // System default
-            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-              document.body.classList.add("dark-mode");
-              document.body.classList.remove("light-mode");
-            } else {
-              document.body.classList.add("light-mode");
-              document.body.classList.remove("dark-mode");
-            }
-          }
-        });
-      });
-    </script>
+    <!-- Removed duplicate theme toggle script to avoid redeclaration errors -->
 
     <script>
       // Example masking function
