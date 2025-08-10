@@ -78,14 +78,14 @@
             <li class="nav-item">
               <a class="nav-link text-white active" href="index.html">Home</a>
             </li>
-           
+
             <li class="nav-item">
               <a class="nav-link text-white" href="register.html">Verify</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white " href="about.html">About</a>
+              <a class="nav-link text-white" href="about.html">About</a>
             </li>
-             <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link text-white" href="faq.html">FAQ</a>
             </li>
           </ul>
@@ -107,8 +107,12 @@
                 class="dropdown-menu dropdown-menu-end"
                 aria-labelledby="userDropdown"
               >
-                <li><a class="dropdown-item active" href="login.html">Login</a></li>
-                <li><a class="dropdown-item" href="register.html">Register</a></li>
+                <li>
+                  <a class="dropdown-item active" href="login.html">Login</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Register</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -116,68 +120,52 @@
       </div>
     </nav>
 
-<!-- =====  Login Form======= -->
-<div class="login-container">
-  <h2>Welcome back</h2>
-  <p>Please log in to access your dashboard or activities.</p>
+    <!-- =====  Login Form======= -->
+    <div class="login-container">
+      <h2>Welcome back</h2>
+      <p>Please log in to access your dashboard or activities.</p>
 
-  <form>
-    <label for="email">Email address</label>
-    <input type="email" id="email" placeholder="Enter your email" required>
+      <form id="loginForm" class="login-form">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
 
-    <label for="password">Password</label>
-    <div class="password-wrapper">
-      <input type="password" id="password" placeholder="Enter your password" required>
-      <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" id="remember" /> Remember me</label>
+          <a href="#" class="forgot-password">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+
+        <div class="divider">or continue with</div>
+
+        <button type="button" class="google-btn">
+          <img src="https://img.icons8.com/color/16/000000/google-logo.png" />
+          Continue with Google
+        </button>
+
+        <p class="bottom-text">
+          Don’t have an account?
+          <a href="register.html">Register</a>
+        </p>
+      </form>
     </div>
 
-    <div class="options">
-      <label><input type="checkbox" id="remember"> Remember me</label>
-      <a href="#" class="forgot-password">Forgot Password?</a>
-    </div>
-
-    <button type="submit" class="login-btn">Login</button>
-
-    <div class="divider">or continue with</div>
-
-    <button type="button" class="google-btn">
-      <img src="https://img.icons8.com/color/16/000000/google-logo.png"/>
-      Continue with Google
-    </button>
-
-    <p class="bottom-text">
-      Don’t have an account?
-      <a href="register.html">Register</a>
-    </p>
-  </form>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <!-- ======Footer======== -->
 
     <footer class="bg-dark text-white pt-5 pb-4 position-relative">
@@ -277,14 +265,13 @@
         </div>
       </div>
 
+      <!-- Chatbot Toggle Button -->
 
       <!-- Chatbot Toggle Button -->
-           
-  <!-- Chatbot Toggle Button -->
-  <!-- <div id="chat-toggle">&#128172;</div> -->
+      <!-- <div id="chat-toggle">&#128172;</div> -->
 
-  <!-- Chatbot Container -->
-  <!-- <div id="chatbot-container">
+      <!-- Chatbot Container -->
+      <!-- <div id="chatbot-container">
     <div class="chat-header">VerifAI Assistant 🤖</div>
     <div class="chat-body" id="chat-body">
       <div class="bot-message">Hi! Ask me anything about VerifAI.</div>
@@ -294,7 +281,6 @@
       <button id="send-btn">Send</button>
     </div>
   </div> -->
-
 
       <!-- Back to Top -->
       <a
@@ -307,10 +293,15 @@
       </a>
     </footer>
 
-
-
-
-    
+    <!-- In login.html, before the closing </body> tag -->
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent actual form submission
+          window.location.href = "main.html"; // Redirect to main page
+        });
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
