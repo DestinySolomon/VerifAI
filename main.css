@@ -38,7 +38,6 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-
 body.dark-mode {
   background: #121212 !important;
   color: #f1f1f1 !important;
