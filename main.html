@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Aubrey&family=Edu+NSW+ACT+Hand+Pre:wght@500&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Nova+Square&family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css" />
 
     <link
@@ -21,310 +25,300 @@
       rel="stylesheet"
     />
 
+
     <title>Verifai</title>
-</head>
-<body>
+  </head>
+
 
   <body class="light-mode">
-  <nav class="navbar navbar-expand-lg navbar-verifai px-3">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand text-white fw-bold" href="#">VerifAI</a>
+    <nav class="navbar navbar-expand-lg navbar-verifai px-3">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand text-white fw-bold" href="#">VerifAi</a>
 
-      <!-- Search bar (desktop only) -->
-      <form class="d-none d-lg-block mx-auto" style="width: 400px;">
-        <input class="form-control" type="search" placeholder="Search verification history" aria-label="Search">
-      </form>
-
-      <!-- Right Side (Bell + User) -->
-      <div class="d-flex align-items-center mobile-nav-end ms-auto">
-        <!-- Bell Icon -->
-        <button class="btn text-white position-relative me-3">
-          <i class="fas fa-bell fs-5"></i>
-          <span
-            class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"
-          ></span>
-        </button>
-
-        <!-- User Dropdown -->
-        <div class="dropdown">
-          <img
-            src="Images/dee.jpg"
-            class="user-img"
-            id="userDropdown"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            alt="User"
-            style="width: 36px; height: 36px; border-radius: 50%; cursor: pointer;"
+        <!-- Search bar (desktop only) -->
+        <form class="d-none d-lg-block mx-auto" style="width: 400px">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Search verification history"
+            aria-label="Search"
           />
-          <ul class="dropdown-menu dropdown-menu-end shadow">
-            <!-- User Info -->
-            <li class="px-3 py-2 border-bottom">
-              <div class="fw-bold">Dee Solomon</div>
-              <small class="text-muted">dee****@gmail.com</small>
-            </li>
+        </form>
 
-            <li><a class="dropdown-item" href="#"><i class="fas fa-user-cog me-2"></i>Account</a></li>
-            <li><a class="dropdown-item" href="#"><i class="fas fa-sliders-h me-2"></i>Settings</a></li>
+        <!-- Right Side (Bell + User) -->
+        <div class="d-flex align-items-center mobile-nav-end ms-auto">
+          <!-- Bell Icon -->
+          <button class="btn text-white position-relative me-3">
+            <i class="fas fa-bell fs-5"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"
+            ></span>
+          </button>
 
-            <!-- Appearance Dropdown -->
-            <li class="dropdown-submenu dropend position-relative">
-              <a class="dropdown-item dropdown-toggle" href="#"><i class="fas fa-moon me-2"></i>Appearance</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item theme-toggle" href="#" data-theme="light"><i class="fas fa-sun me-2"></i>Light Mode</a></li>
-                <li><a class="dropdown-item theme-toggle" href="#" data-theme="dark"><i class="fas fa-moon me-2"></i>Dark Mode</a></li>
-                <li><a class="dropdown-item theme-toggle" href="#" data-theme="system"><i class="fas fa-desktop me-2"></i>System</a></li>
-              </ul>
-            </li>
+          <!-- User Dropdown -->
+          <div class="dropdown">
+            <img
+              src="Images/dee.jpg"
+              class="user-img"
+              id="userDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              alt="User"
+              style="
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                cursor: pointer;
+              "
+            />
+            <ul class="dropdown-menu dropdown-menu-end shadow">
+              <!-- User Info -->
+              <li class="px-3 py-2 border-bottom">
+                <div class="fw-bold">Dee Solomon</div>
+                <small class="text-muted">dee****@gmail.com</small>
+              </li>
 
-            <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i>Help</a></li>
-            <li><a class="dropdown-item" href="#"><i class="fas fa-comment-dots me-2"></i>Feedback</a></li>
-            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
-            <li><a class="dropdown-item text-success" href="#"><i class="fas fa-user-plus me-2"></i>Add Account</a></li>
-          </ul>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fas fa-user-cog me-2"></i>Account</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fas fa-sliders-h me-2"></i>Settings</a
+                >
+              </li>
+
+              <!-- Appearance Dropdown -->
+              <li class="dropdown-submenu dropend position-relative">
+                <a class="dropdown-item dropdown-toggle" href="#"
+                  ><i class="fas fa-moon me-2"></i>Appearance</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item theme-toggle"
+                      href="#"
+                      data-theme="light"
+                      ><i class="fas fa-sun me-2"></i>Light Mode</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-toggle"
+                      href="#"
+                      data-theme="dark"
+                      ><i class="fas fa-moon me-2"></i>Dark Mode</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item theme-toggle"
+                      href="#"
+                      data-theme="system"
+                      ><i class="fas fa-desktop me-2"></i>System</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fas fa-question-circle me-2"></i>Help</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fas fa-comment-dots me-2"></i>Feedback</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-danger" href="#"
+                  ><i class="fas fa-sign-out-alt me-2"></i>Logout</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-success" href="#"
+                  ><i class="fas fa-user-plus me-2"></i>Add Account</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Start Verification Section -->
+
+    <div class="container my-5">
+      <div class="card shadow border-0 p-4 text-center">
+        <h4 class="fw-bold mb-4">Start Verification</h4>
+
+        <!-- Upload Area -->
+
+        <div
+          id="upload-area"
+          class="p-5 rounded upload-box d-flex flex-column align-items-center justify-content-center"
+          style="
+            cursor: pointer;
+            background: linear-gradient(135deg, #74bde0, #a1a1a1);
+            color: white;
+          "
+        >
+          <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+          <p class="mb-0">Drag & drop a photo here, or click to select</p>
+          <input type="file" id="fileInput" accept="image/*" class="d-none" />
+        </div>
+
+        <!-- Preview Area -->
+        <div id="preview-area" class="mt-4 d-none">
+          <img
+            id="preview-img"
+            src=""
+            alt="Preview"
+            class="img-fluid rounded shadow"
+            style="max-height: 300px"
+          />
+          <div class="mt-4">
+            <button
+              id="startVerificationBtn"
+              class="btn btn-gradient px-4 fw-bold"
+            >
+              <i class="fas fa-check-circle me-2"></i> Start Verification
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </nav>
 
+    <!-- Results Section -->
 
-
-<!-- Start Verification Section -->
- 
-
-<div class="container my-5">
-  <div class="card shadow border-0 p-4 text-center">
-    <h4 class="fw-bold mb-4">Start Verification</h4> 
-
-    <!-- Upload Area -->
-     
-    <div id="upload-area" 
-         class="p-5 rounded upload-box d-flex flex-column align-items-center justify-content-center" 
-         style="cursor: pointer; background: linear-gradient(135deg, #74bde0, #a1a1a1); color: white;">
-      <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
-      <p class="mb-0">Drag & drop a photo here, or click to select</p>
-      <input type="file" id="fileInput" accept="image/*" class="d-none">
-    </div> 
-
-    <!-- Preview Area -->
-     <div id="preview-area" class="mt-4 d-none">
-      <img id="preview-img" src="" alt="Preview" 
-           class="img-fluid rounded shadow" 
-           style="max-height: 300px;">
-      <div class="mt-4">
-        <button id="startVerificationBtn" class="btn btn-gradient px-4 fw-bold">
-          <i class="fas fa-check-circle me-2"></i> Start Verification
-        </button>
+    <div id="results-section" class="container my-5 d-none">
+      <h4 class="fw-bold mb-4">Verification Results</h4>
+      <div id="results-container" class="row g-4">
+        <!--   Dynamic cards will be injected here -->
       </div>
     </div>
-  </div>
-</div> 
 
-<!-- Results Section -->
-
-<div id="results-section" class="container my-5 d-none">
-  <h4 class="fw-bold mb-4">Verification Results</h4>
-  <div id="results-container" class="row g-4">
-    Dynamic cards will be injected here -->
-  </div>
-</div> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Scripts -->
-
-
-<script>
-
-  const uploadArea = document.getElementById('upload-area');
-  const fileInput = document.getElementById('fileInput');
-  const previewArea = document.getElementById('preview-area');
-  const previewImg = document.getElementById('preview-img');
-  const resultsSection = document.getElementById('results-section');
-  const resultsContainer = document.getElementById('results-container');
-  let uploadedImage = '';
-
-  const platforms = [
-    { name: "X (Twitter)", icon: "fab fa-twitter text-primary", username: "@coolguy", bio: "Just vibin’ and tweeting nonsense 🐦" },
-    { name: "Facebook", icon: "fab fa-facebook text-primary", username: "john.doe.fb", bio: "Family. Friends. Food. Fun. 💙" },
-    { name: "Instagram", icon: "fab fa-instagram text-danger", username: "john_insta", bio: "Capturing life’s moments 📸" },
-    { name: "Tinder", icon: "fas fa-fire text-danger", username: "Adventurer", bio: "Swipe right if you love dogs 🐶" },
-    { name: "LinkedIn", icon: "fab fa-linkedin text-primary", username: "John Doe", bio: "Tech enthusiast & coffee lover ☕" },
-    { name: "Reddit", icon: "fab fa-reddit text-warning", username: "u/realjohn", bio: "Memes, tech, and random thoughts" },
-    { name: "Snapchat", icon: "fab fa-snapchat text-warning", username: "snap.john", bio: "Snap me for good vibes ✌" }
-  ];
-
-  uploadArea.addEventListener('click', () => fileInput.click());
-
-  fileInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        uploadedImage = reader.result;
-        previewImg.src = uploadedImage;
-        previewArea.classList.remove('d-none');
-      };
-      reader.readAsDataURL(file);
-    }
-  });
-
-  document.getElementById('startVerificationBtn').addEventListener('click', () => {
-    resultsContainer.innerHTML = '';
-    resultsSection.classList.remove('d-none');
-    resultsSection.scrollIntoView({ behavior: 'smooth' });
-
-    setTimeout(() => {
-      generateResults();
-    }, 2000);                    // 2 seconds delay for realism
-  });
-
-  function generateResults() {
-    const selectedPlatforms = shuffleArray(platforms).slice(3, 6); // Random 3–6 platforms
-    selectedPlatforms.forEach(p => {
-      const confidence = Math.floor(Math.random() * (98 - 85 + 1)) + 85; // 85–98%
-      const card = `
+    <!-- Search History Section -->
+    <div id="search-history-section" class="container my-5">
+      <div class="card shadow border-0 p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="fw-bold mb-0">Search History</h4>
+          <button id="clearHistoryBtn" class="btn btn-sm btn-outline-danger">
+            <i class="fas fa-trash-alt me-1"></i> Clear History
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Photo</th>
+                <th scope="col">Name</th>
+                <th scope="col">Confidence</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody id="searchHistoryTable">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <!-- ========= -->
+
+    <script>
+      const uploadArea = document.getElementById("upload-area");
+      const fileInput = document.getElementById("fileInput");
+      const previewArea = document.getElementById("preview-area");
+      const previewImg = document.getElementById("preview-img");
+      const resultsSection = document.getElementById("results-section");
+      const resultsContainer = document.getElementById("results-container");
+      let uploadedImage = "";
+
+      const platforms = [
+        {
+          name: "X (Twitter)",
+          icon: "fab fa-twitter text-primary",
+          username: "@coolguy",
+          bio: "Just vibin’ and tweeting nonsense 🐦",
+        },
+        {
+          name: "Facebook",
+          icon: "fab fa-facebook text-primary",
+          username: "john.doe.fb",
+          bio: "Family. Friends. Food. Fun. 💙",
+        },
+        {
+          name: "Instagram",
+          icon: "fab fa-instagram text-danger",
+          username: "john_insta",
+          bio: "Capturing life’s moments 📸",
+        },
+        {
+          name: "Tinder",
+          icon: "fas fa-fire text-danger",
+          username: "Adventurer",
+          bio: "Swipe right if you love dogs 🐶",
+        },
+        {
+          name: "LinkedIn",
+          icon: "fab fa-linkedin text-primary",
+          username: "John Doe",
+          bio: "Tech enthusiast & coffee lover ☕",
+        },
+        {
+          name: "Reddit",
+          icon: "fab fa-reddit text-warning",
+          username: "u/realjohn",
+          bio: "Memes, tech, and random thoughts",
+        },
+        {
+          name: "Snapchat",
+          icon: "fab fa-snapchat text-warning",
+          username: "snap.john",
+          bio: "Snap me for good vibes ✌",
+        },
+      ];
+
+      uploadArea.addEventListener("click", () => fileInput.click());
+
+      fileInput.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            uploadedImage = reader.result;
+            previewImg.src = uploadedImage;
+            previewArea.classList.remove("d-none");
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      document
+        .getElementById("startVerificationBtn")
+        .addEventListener("click", () => {
+          resultsContainer.innerHTML = "";
+          resultsSection.classList.remove("d-none");
+          resultsSection.scrollIntoView({ behavior: "smooth" });
+
+          setTimeout(() => {
+            generateResults();
+          }, 2000); // 2 seconds delay for realism
+        });
+
+      function generateResults() {
+        const selectedPlatforms = shuffleArray(platforms).slice(3, 6); // Random 3–6 platforms
+        selectedPlatforms.forEach((p) => {
+          const confidence = Math.floor(Math.random() * (98 - 85 + 1)) + 85; // 85–98%
+          const card = `
         <div class="col-md-6 col-lg-3">
           <div class="card shadow border-0 h-100 text-center p-3">
             <img class="rounded-circle mx-auto mb-3" 
@@ -349,70 +343,77 @@
           </div>
         </div>
       `;
-      resultsContainer.innerHTML += card;
-    });
+          resultsContainer.innerHTML += card;
+        });
 
-    // Activate Bootstrap tooltips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-  }
-
-  function shuffleArray(array) {
-    return array.sort(() => Math.random() - 0.5);
-  }
-// </script>
-
-
-<!-- =============== -->
-
-   <script>  // Add support for nested dropdown (Appearance submenu)
-  document.querySelectorAll('.dropdown-submenu .dropdown-toggle').forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      let submenu = el.nextElementSibling;
-      if (submenu) submenu.classList.toggle('show');
-    });
-  });</script>
-
-
-<script>// Theme toggle logic
-const themeButtons = document.querySelectorAll(".theme-toggle");
-
-themeButtons.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const theme = btn.dataset.theme;
-    if (theme === "dark") {
-      document.body.classList.add("dark-mode");
-      document.body.classList.remove("light-mode");
-    } else if (theme === "light") {
-      document.body.classList.add("light-mode");
-      document.body.classList.remove("dark-mode");
-    } else {
-      // System default
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        document.body.classList.add("dark-mode");
-        document.body.classList.remove("light-mode");
-      } else {
-        document.body.classList.add("light-mode");
-        document.body.classList.remove("dark-mode");
+        // Activate Bootstrap tooltips
+        var tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
       }
-    }
-  });
-});
-</script>
 
-<script>// Example masking function
-function maskEmail(email) {
-  const [user, domain] = email.split('@');
-  const maskedUser = user.slice(0, 3) + '****';
-  return `${maskedUser}@${domain}`;
-}
-</script>
-  
+      function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
+      }
+      //
+    </script>
+
+    <!-- =============== -->
+
+    <script>
+      // Add support for nested dropdown (Appearance submenu)
+      document
+        .querySelectorAll(".dropdown-submenu .dropdown-toggle")
+        .forEach(function (el) {
+          el.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let submenu = el.nextElementSibling;
+            if (submenu) submenu.classList.toggle("show");
+          });
+        });
+    </script>
+
+    <script>
+      // Theme toggle logic
+      const themeButtons = document.querySelectorAll(".theme-toggle");
+
+      themeButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const theme = btn.dataset.theme;
+          if (theme === "dark") {
+            document.body.classList.add("dark-mode");
+            document.body.classList.remove("light-mode");
+          } else if (theme === "light") {
+            document.body.classList.add("light-mode");
+            document.body.classList.remove("dark-mode");
+          } else {
+            // System default
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+              document.body.classList.add("dark-mode");
+              document.body.classList.remove("light-mode");
+            } else {
+              document.body.classList.add("light-mode");
+              document.body.classList.remove("dark-mode");
+            }
+          }
+        });
+      });
+    </script>
+
+    <script>
+      // Example masking function
+      function maskEmail(email) {
+        const [user, domain] = email.split("@");
+        const maskedUser = user.slice(0, 3) + "****";
+        return `${maskedUser}@${domain}`;
+      }
+    </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -423,6 +424,7 @@ function maskEmail(email) {
     <script>
       AOS.init();
     </script>
+    <script src="search-hisoty.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

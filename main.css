@@ -26,6 +26,16 @@ body.dark-mode {
   background: var(--navbar-gradient);
 }
 
+.navbar-brand{
+  
+
+  font-family: "Playwrite HU", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+
+}
+
 .user-img {
   width: 40px;
   height: 40px;
@@ -56,55 +66,47 @@ body.dark-mode {
   }
 }
 
-
 /* =======Verification section=== */
-  .btn-gradient {
-    background: linear-gradient(90deg, #0066ff, #00ccff);
-    color: white;
-    border: none;
-    transition: 0.3s;
-  }
-  .btn-gradient:hover {
-    opacity: 0.9;
-    color: white;
-  }
-  #upload-area.border-dashed {
-    border-style: dashed !important;
-  }
+.btn-gradient {
+  background: linear-gradient(90deg, #0066ff, #00ccff);
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+.btn-gradient:hover {
+  opacity: 0.9;
+  color: white;
+}
+#upload-area.border-dashed {
+  border-style: dashed !important;
+}
 
+.social-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+.social-card i {
+  width: 20px;
+}
 
-  .social-card {
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 10px;
-    background: #fafafa;
-  }
-  .social-card i {
-    width: 20px;
-  }
-
-
-  
-
-
-  .upload-box {
-    background: linear-gradient(135deg, #007bff, #a1e1fa);
-    border: 2px dashed rgba(255, 255, 255, 0.4);
-    transition: all 0.3s ease;
-  }
-  .upload-box:hover {
-    border-color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  }
-  .btn-gradient {
-    background: linear-gradient(135deg, #007bff, #a1e1fa);
-    color: #fff;
-    border: none;
-  }
-  .btn-gradient:hover {
-    opacity: 0.9;
-  }
-
-
+.upload-box {
+  background: linear-gradient(135deg, #007bff, #a1e1fa);
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+.upload-box:hover {
+  border-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.btn-gradient {
+  background: linear-gradient(135deg, #007bff, #a1e1fa);
+  color: #fff;
+  border: none;
+}
+.btn-gradient:hover {
+  opacity: 0.9;
+}
