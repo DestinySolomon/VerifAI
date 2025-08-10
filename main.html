@@ -229,6 +229,35 @@
       </div>
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Scripts -->
 
     <script>
@@ -354,49 +383,6 @@
         }
       });
 
-      // --- Search History Logic ---
-      function getHistory() {
-        return JSON.parse(localStorage.getItem("verifai-history") || "[]");
-      }
-
-      function setHistory(history) {
-        localStorage.setItem("verifai-history", JSON.stringify(history));
-      }
-
-      function addToHistory(entry) {
-        const history = getHistory();
-        history.unshift(entry); // add to top
-        setHistory(history);
-      }
-
-      function renderHistory() {
-        const history = getHistory();
-        const table = document.getElementById("searchHistoryTable");
-        table.innerHTML = "";
-        if (history.length === 0) {
-          table.innerHTML = `<tr><td colspan='4' class='text-center text-muted'>No search history found.</td></tr>`;
-          return;
-        }
-        history.forEach((item) => {
-          table.innerHTML += `
-            <tr>
-              <td><img src="${item.photo}" alt="Profile" style="width:40px;height:40px;object-fit:cover;border-radius:50%"></td>
-              <td>${item.name}</td>
-              <td>${item.confidence}%</td>
-              <td>${item.date}</td>
-            </tr>
-          `;
-        });
-      }
-
-      document
-        .getElementById("clearHistoryBtn")
-        .addEventListener("click", () => {
-          localStorage.removeItem("verifai-history");
-          renderHistory();
-        });
-
-      // --- Verification Logic ---
       document
         .getElementById("startVerificationBtn")
         .addEventListener("click", () => {
@@ -411,8 +397,6 @@
 
       function generateResults() {
         const selectedPlatforms = shuffleArray(platforms).slice(0, 4); // Show 4 platforms
-        const now = new Date();
-        const dateStr = now.toLocaleString();
         selectedPlatforms.forEach((p) => {
           const confidence = Math.floor(Math.random() * (98 - 85 + 1)) + 85; // 85–98%
           const card = `
@@ -441,17 +425,7 @@
         </div>
       `;
           resultsContainer.innerHTML += card;
-
-          // Add to search history
-          addToHistory({
-            photo: uploadedImage,
-            name: p.username,
-            confidence: confidence,
-            date: dateStr,
-          });
         });
-
-        renderHistory();
 
         // Activate Bootstrap tooltips
         var tooltipTriggerList = [].slice.call(
@@ -461,9 +435,6 @@
           return new bootstrap.Tooltip(tooltipTriggerEl);
         });
       }
-
-      // On page load, render history
-      renderHistory();
 
       function shuffleArray(array) {
         return array.sort(() => Math.random() - 0.5);
