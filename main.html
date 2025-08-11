@@ -201,31 +201,16 @@
       </div>
     </div>
 
-    <!-- Search History Section -->
-    <div id="search-history-section" class="container my-5">
-      <div class="card shadow border-0 p-4">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h4 class="fw-bold mb-0">Search History</h4>
-          <button id="clearHistoryBtn" class="btn btn-sm btn-outline-danger">
-            <i class="fas fa-trash-alt me-1"></i> Clear History
-          </button>
-        </div>
-
-        <div class="table-responsive">
-          <table class="table table-hover align-middle mb-0">
-            <thead class="table-light">
-              <tr>
-                <th scope="col">Photo</th>
-                <th scope="col">Name</th>
-                <th scope="col">Confidence</th>
-                <th scope="col">Date</th>
-              </tr>
-            </thead>
-            <tbody id="searchHistoryTable">
-              <!-- Populated by JS -->
-            </tbody>
-          </table>
-        </div>
+    <!-- Report CTA Section -->
+    <div id="cta-section" class="container my-5 d-none">
+      <div class="card shadow border-0 p-4 text-center">
+        <h4 class="fw-bold mb-3">Think you found a scammer?</h4>
+        <p class="text-muted">
+          Help protect others by reporting suspicious profiles.
+        </p>
+        <a href="report.html" class="btn btn-danger btn-lg fw-bold">
+          <i class="fas fa-flag me-2"></i> Report a Profile
+        </a>
       </div>
     </div>
 
@@ -354,52 +339,7 @@
         }
       });
 
-      // --- Search History Logic ---
-      const searchHistoryKey = "verifai-search-history";
-      const searchHistoryTable = document.getElementById("searchHistoryTable");
-      const clearHistoryBtn = document.getElementById("clearHistoryBtn");
-
-      function loadSearchHistory() {
-        const history = JSON.parse(
-          localStorage.getItem(searchHistoryKey) || "[]"
-        );
-        searchHistoryTable.innerHTML = "";
-        history.forEach((entry) => {
-          const row = `<tr>
-            <td><img src="${entry.photo}" alt="Photo" style="width:40px;height:40px;object-fit:cover;border-radius:50%"></td>
-            <td>${entry.name}</td>
-            <td><span class="badge bg-success">${entry.confidence}%</span></td>
-            <td>${entry.date}</td>
-          </tr>`;
-          searchHistoryTable.innerHTML += row;
-        });
-      }
-
-      function addToSearchHistory(photo, name, confidence) {
-        const history = JSON.parse(
-          localStorage.getItem(searchHistoryKey) || "[]"
-        );
-        const now = new Date();
-        const entry = {
-          photo,
-          name,
-          confidence,
-          date: now.toLocaleString(),
-        };
-        history.unshift(entry);
-        if (history.length > 10) history.length = 10; // Keep only last 10
-        localStorage.setItem(searchHistoryKey, JSON.stringify(history));
-        loadSearchHistory();
-      }
-
-      clearHistoryBtn.addEventListener("click", () => {
-        localStorage.removeItem(searchHistoryKey);
-        loadSearchHistory();
-      });
-
-      // On page load
-      loadSearchHistory();
-
+      // ...existing code...
       document
         .getElementById("startVerificationBtn")
         .addEventListener("click", () => {
@@ -412,11 +352,11 @@
           resultsSection.scrollIntoView({ behavior: "smooth" });
 
           setTimeout(() => {
-            const resultsForHistory = generateResults();
-            if (resultsForHistory && resultsForHistory.length) {
-              // Only add the first result to search history (original behavior)
-              const r = resultsForHistory[0];
-              addToSearchHistory(uploadedImage, r.name, r.confidence);
+            generateResults();
+            // Show CTA section after verification
+            var ctaSection = document.getElementById("cta-section");
+            if (ctaSection) {
+              ctaSection.classList.remove("d-none");
             }
             // Optionally reset preview area after verification
             // previewArea.classList.add("d-none");
@@ -474,6 +414,31 @@
         return array.sort(() => Math.random() - 0.5);
       }
       //
+    </script>
+
+    <script>
+      // Show the Report CTA section after results
+      function displayVerificationResults(results) {
+        const firstResult = results[0];
+
+        // Your existing display code for results...
+        // ...
+
+        // Save search history
+        saveSearchHistory(
+          firstResult.image,
+          firstResult.name,
+          firstResult.confidence
+        );
+
+        // Update search history instantly
+        renderSearchHistory();
+
+        // ✅ Show CTA section only now
+        document
+          .getElementById("report-cta-section")
+          .classList.remove("d-none");
+      }
     </script>
 
     <!-- =============== -->
