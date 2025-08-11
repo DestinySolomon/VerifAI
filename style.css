@@ -19,8 +19,6 @@ body {
   padding-top: 80px; /* Push body content down so it's not hidden behind navbar */
 }
 
-
-
 /* Scroll effect styling */
 .sub-nav.scrolled,
 .main-nav.scrolled {
@@ -39,19 +37,16 @@ body {
     width: 100%;
     z-index: 1050; /* Make sure it stays above everything */
   }
-.navbar-toggler-icon{
-  position: absolute;
-  top: 14px;
-  right: 20px;
- 
-}
+  .navbar-toggler-icon {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+  }
 
-.navbar-toggler{
- width: 10%;
- height: 4vh;
-
-}
-  
+  .navbar-toggler {
+    width: 10%;
+    height: 4vh;
+  }
 }
 
 .navbar-toggler-icon {
@@ -1022,7 +1017,6 @@ button:hover {
   border-left: 4px solid #3b7197;
 }
 
-
 .input-wrapper {
   position: relative;
 }
@@ -1045,7 +1039,6 @@ button:hover {
   font-size: 18px;
 }
 
-
 /* ====Login Form==== */
 .login-container {
   max-width: 400px;
@@ -1053,7 +1046,7 @@ button:hover {
   padding: 30px;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -1108,14 +1101,14 @@ input[type="password"] {
 }
 
 .forgot-password {
-  color: #3B7197;
+  color: #3b7197;
   text-decoration: none;
 }
 
 .login-btn {
   width: 100%;
   padding: 12px;
-  background-color: #3B7197;
+  background-color: #3b7197;
   color: white;
   font-size: 16px;
   border: none;
@@ -1172,41 +1165,81 @@ input[type="password"] {
 }
 
 .bottom-text a {
-  color: #3B7197;
+  color: #3b7197;
   text-decoration: none;
 }
 
 /* =====FAQ PAGE====== */
 
-    .faq-header {
-      background: linear-gradient(to right, #3B7197, #74BDE0);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      border-radius: 0 0 30px 30px;
-    }
+.faq-header {
+  background: linear-gradient(to right, #3b7197, #74bde0);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+}
 
-    .accordion-button:not(.collapsed) {
-      color: #3B7197;
-      background-color: #e8f4fb;
-      font-weight: 600;
-    }
+.accordion-button:not(.collapsed) {
+  color: #3b7197;
+  background-color: #e8f4fb;
+  font-weight: 600;
+}
 
-    .accordion-button:hover {
-      background-color: #d8ecf8;
-    }
+.accordion-button:hover {
+  background-color: #d8ecf8;
+}
 
-    .accordion-body {
-      background-color: #fff;
-    }
+.accordion-body {
+  background-color: #fff;
+}
 
-    .faq-section {
-      padding: 40px 20px;
-    }
-
-
+.faq-section {
+  padding: 40px 20px;
+}
 
 /* ====================== */
+
+/* Chatbot Footer Fix */
+#chatbot-container .chat-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+#chatbot-container .chat-footer input[type="text"] {
+  flex: 1 1 auto;
+  min-width: 0;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  outline: none;
+}
+#chatbot-container .chat-footer button {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  max-width: 38px;
+  max-height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #74bde0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 0;
+  margin-left: 0.5rem;
+  transition: background 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+}
+#chatbot-container .chat-footer button:hover {
+  background: #3b7197;
+}
 
 /* ======Footer===== */
 .footer-link:hover {

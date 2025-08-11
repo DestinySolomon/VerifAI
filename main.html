@@ -229,35 +229,6 @@
       </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Scripts -->
 
     <script>
@@ -383,22 +354,83 @@
         }
       });
 
+      // --- Search History Logic ---
+      const searchHistoryKey = "verifai-search-history";
+      const searchHistoryTable = document.getElementById("searchHistoryTable");
+      const clearHistoryBtn = document.getElementById("clearHistoryBtn");
+
+      function loadSearchHistory() {
+        const history = JSON.parse(
+          localStorage.getItem(searchHistoryKey) || "[]"
+        );
+        searchHistoryTable.innerHTML = "";
+        history.forEach((entry) => {
+          const row = `<tr>
+            <td><img src="${entry.photo}" alt="Photo" style="width:40px;height:40px;object-fit:cover;border-radius:50%"></td>
+            <td>${entry.name}</td>
+            <td><span class="badge bg-success">${entry.confidence}%</span></td>
+            <td>${entry.date}</td>
+          </tr>`;
+          searchHistoryTable.innerHTML += row;
+        });
+      }
+
+      function addToSearchHistory(photo, name, confidence) {
+        const history = JSON.parse(
+          localStorage.getItem(searchHistoryKey) || "[]"
+        );
+        const now = new Date();
+        const entry = {
+          photo,
+          name,
+          confidence,
+          date: now.toLocaleString(),
+        };
+        history.unshift(entry);
+        if (history.length > 10) history.length = 10; // Keep only last 10
+        localStorage.setItem(searchHistoryKey, JSON.stringify(history));
+        loadSearchHistory();
+      }
+
+      clearHistoryBtn.addEventListener("click", () => {
+        localStorage.removeItem(searchHistoryKey);
+        loadSearchHistory();
+      });
+
+      // On page load
+      loadSearchHistory();
+
       document
         .getElementById("startVerificationBtn")
         .addEventListener("click", () => {
+          if (!uploadedImage) {
+            alert("Please upload a photo before starting verification.");
+            return;
+          }
           resultsContainer.innerHTML = "";
           resultsSection.classList.remove("d-none");
           resultsSection.scrollIntoView({ behavior: "smooth" });
 
           setTimeout(() => {
-            generateResults();
+            const resultsForHistory = generateResults();
+            if (resultsForHistory && resultsForHistory.length) {
+              // Only add the first result to search history (original behavior)
+              const r = resultsForHistory[0];
+              addToSearchHistory(uploadedImage, r.name, r.confidence);
+            }
+            // Optionally reset preview area after verification
+            // previewArea.classList.add("d-none");
+            // uploadedImage = "";
           }, 2000); // 2 seconds delay for realism
         });
 
       function generateResults() {
         const selectedPlatforms = shuffleArray(platforms).slice(0, 4); // Show 4 platforms
+        let cardsHTML = "";
+        let resultsForHistory = [];
         selectedPlatforms.forEach((p) => {
           const confidence = Math.floor(Math.random() * (98 - 85 + 1)) + 85; // 85–98%
+          resultsForHistory.push({ name: p.name, confidence });
           const card = `
         <div class="col-md-6 col-lg-3">
           <div class="card shadow border-0 h-100 text-center p-3">
@@ -424,8 +456,9 @@
           </div>
         </div>
       `;
-          resultsContainer.innerHTML += card;
+          cardsHTML += card;
         });
+        resultsContainer.innerHTML = cardsHTML;
 
         // Activate Bootstrap tooltips
         var tooltipTriggerList = [].slice.call(
@@ -434,6 +467,7 @@
         tooltipTriggerList.map(function (tooltipTriggerEl) {
           return new bootstrap.Tooltip(tooltipTriggerEl);
         });
+        return resultsForHistory;
       }
 
       function shuffleArray(array) {
