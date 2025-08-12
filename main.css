@@ -1,3 +1,12 @@
+
+  :root{
+      --verifai-deep: #3B7197;
+      --verifai-light: #74BDE0;
+      --verifai-white: #ffffff;
+    }
+
+
+
 /* Improve table readability in dark mode */
 body.dark-mode .table,
 body.dark-mode .table-hover > tbody > tr,
@@ -222,4 +231,75 @@ body.light-mode .btn-gradient {
     }
     .btn-gradient:hover {
       background: linear-gradient(135deg, #0077b6, #74bde0);
+    }
+
+
+    /* ======Account page styles===== */
+    
+    .top-hero{
+      background: linear-gradient(135deg, var(--verifai-deep), var(--verifai-light));
+      color: var(--verifai-white);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 30px rgba(59,113,151,0.12);
+    }
+
+    #starredEmail{
+      color: white;
+      font-weight: 600;
+    }
+
+    .profile-pic{
+      width:96px; height:96px; object-fit:cover; border-radius:50%;
+      border:4px solid rgba(255,255,255,0.15);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .badge-verified{
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border-radius: 12px;
+      padding: 6px 10px;
+      font-weight:600;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    .card-section{
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+    }
+
+    .stat-card{
+      border-radius: 10px;
+      padding: 18px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .stat-value{
+      font-size: 1.5rem;
+      font-weight:700;
+      color: var(--verifai-deep);
+    }
+
+    .danger-zone{
+      border-left: 4px solid #ff4d4f;
+      background: #fff;
+      padding: 18px;
+      border-radius: 10px;
+    }
+
+    .muted-small{ font-size:0.9rem; color:#6c757d; }
+
+    /* small animations */
+    .fade-in { animation: fadeIn .45s ease both; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity:1; transform: none; } }
+
+    /* mobile tweaks */
+    @media (max-width:767px){
+      .top-hero { padding: 18px; }
+      .profile-pic { width:80px; height:80px; }
     }
