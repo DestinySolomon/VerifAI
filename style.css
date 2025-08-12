@@ -767,7 +767,7 @@ textarea {
     ellipse,
     rgba(4, 161, 234, 0.3),
     rgba(15, 189, 238, 0.628),
-    transparent 90%
+    transparent 77%
   );
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -1248,10 +1248,20 @@ input[type="password"] {
 }
 
 #backToTop {
-  z-index: 999;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 30px;
+  left: 100vw;
+  margin-left: -70px;
+  z-index: 9999;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-
 #backToTop:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.08);
 }

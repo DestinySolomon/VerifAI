@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,14 +29,12 @@
     />
 
     <title>Verifai</title>
-</head>
-<body>
-  
+  </head>
   <body class="light-mode">
     <nav class="navbar navbar-expand-lg navbar-verifai px-3">
       <div class="container-fluid">
         <!-- Logo -->
-        <a class="navbar-brand text-white fw-bold" href="#">VerifAi</a>
+        <a class="navbar-brand text-white fw-bold" href="main.html">VerifAi</a>
 
         <!-- Search bar (desktop only) -->
         <form class="d-none d-lg-block mx-auto" style="width: 400px">
@@ -150,16 +148,136 @@
       </div>
     </nav>
 
+    <div class="container my-5">
+      <div class="card shadow p-4">
+        <h3 class="fw-bold mb-4 text-center">
+          <i class="fas fa-flag me-2"></i> Report a Suspicious Profile
+        </h3>
 
+        <form id="reportForm">
+          <!-- Full Name -->
+          <div class="mb-3">
+            <label class="form-label">Full Name (if known)</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fullName"
+              placeholder="Enter full name"
+            />
+          </div>
 
+          <!-- Social Media Platform -->
+          <div class="mb-3">
+            <label class="form-label"
+              >Social Media Platform <span class="text-danger">*</span></label
+            >
+            <select class="form-select" id="platform" required>
+              <option value="">Select platform</option>
+              <option>Facebook</option>
+              <option>Instagram</option>
+              <option>TikTok</option>
+              <option>LinkedIn</option>
+              <option>Twitter (X)</option>
+              <option>Snapchat</option>
+              <option>Tinder</option>
+              <option>WhatsApp</option>
+              <option>Telegram</option>
+              <option>Other</option>
+            </select>
+          </div>
 
+          <!-- Crime Type -->
+          <div class="mb-3">
+            <label class="form-label"
+              >Type of Crime <span class="text-danger">*</span></label
+            >
+            <select class="form-select" id="crimeType" required>
+              <option value="">Select crime type</option>
+              <option>Impersonation</option>
+              <option>Romance Scam</option>
+              <option>Advance Fee Fraud</option>
+              <option>Blackmail / Extortion</option>
+              <option>Phishing</option>
+              <option>Identity Theft</option>
+              <option>Fake Business</option>
+              <option>Other</option>
+            </select>
+          </div>
 
-  
+          <!-- Profile Link -->
+          <div class="mb-3">
+            <label class="form-label">Profile Link</label>
+            <input
+              type="url"
+              class="form-control"
+              id="profileLink"
+              placeholder="https://..."
+            />
+          </div>
 
+          <!-- Reason -->
+          <div class="mb-3">
+            <label class="form-label"
+              >Additional Details <span class="text-danger">*</span></label
+            >
+            <textarea
+              class="form-control"
+              id="reason"
+              rows="4"
+              placeholder="Explain why this profile is suspicious..."
+              required
+            ></textarea>
+          </div>
 
+          <!-- Screenshot -->
+          <div class="mb-3">
+            <label class="form-label">Upload Screenshot (optional)</label>
+            <input
+              type="file"
+              class="form-control"
+              id="screenshot"
+              accept="image/*"
+            />
+          </div>
 
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-gradient px-4 fw-bold">
+            <i class="fas fa-paper-plane me-2"></i> Submit Report
+          </button>
+        </form>
 
-    
+        <!-- Success Message -->
+        <div id="successMessage" class="alert alert-success mt-4 d-none">
+          ✅ Thank you! Your report has been submitted.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("reportForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const platform = document.getElementById("platform").value.trim();
+          const crimeType = document.getElementById("crimeType").value.trim();
+          const reason = document.getElementById("reason").value.trim();
+
+          if (!platform || !crimeType || !reason) {
+            alert("Please fill in all required fields.");
+            return;
+          }
+
+          // Mock submission — replace with backend logic later
+          setTimeout(() => {
+            document.getElementById("reportForm").reset();
+            document
+              .getElementById("successMessage")
+              .classList.remove("d-none");
+          }, 500);
+        });
+    </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -170,7 +288,7 @@
     <script>
       AOS.init();
     </script>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

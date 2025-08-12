@@ -207,3 +207,19 @@ body.light-mode .btn-gradient {
 .btn-gradient:hover {
   opacity: 0.9;
 }
+
+
+/* ===Report Form==== */
+
+  .card {
+      border-radius: 12px;
+    }
+    .btn-gradient {
+      background: linear-gradient(135deg, #74bde0, #0077b6);
+      border: none;
+      color: white;
+      transition: 0.3s;
+    }
+    .btn-gradient:hover {
+      background: linear-gradient(135deg, #0077b6, #74bde0);
+    }

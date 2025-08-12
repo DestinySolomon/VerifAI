@@ -192,8 +192,18 @@
       </div>
     </div>
 
-    <!-- Results Section -->
+    <!-- Verifying Spinner -->
+    <div id="verifying-spinner" class="container my-5 d-none text-center">
+      <div
+        class="d-flex flex-column align-items-center justify-content-center"
+        style="min-height: 180px"
+      >
+        <i class="fas fa-shield-alt fa-4x text-primary fa-spin mb-3"></i>
+        <!-- Optionally add a subtle shadow or glow for effect -->
+      </div>
+    </div>
 
+    <!-- Results Section -->
     <div id="results-section" class="container my-5 d-none">
       <h4 class="fw-bold mb-4">Verification Results</h4>
       <div id="results-container" class="row g-4">
@@ -334,35 +344,45 @@
             uploadedImage = reader.result;
             previewImg.src = uploadedImage;
             previewArea.classList.remove("d-none");
+            // Enable Start Verification button
+            document.getElementById("startVerificationBtn").disabled = false;
           };
           reader.readAsDataURL(file);
         }
       });
 
       // ...existing code...
-      document
-        .getElementById("startVerificationBtn")
-        .addEventListener("click", () => {
-          if (!uploadedImage) {
-            alert("Please upload a photo before starting verification.");
-            return;
-          }
-          resultsContainer.innerHTML = "";
-          resultsSection.classList.remove("d-none");
-          resultsSection.scrollIntoView({ behavior: "smooth" });
+      const startVerificationBtn = document.getElementById(
+        "startVerificationBtn"
+      );
+      startVerificationBtn.addEventListener("click", () => {
+        if (!uploadedImage) {
+          alert("Please upload a photo before starting verification.");
+          return;
+        }
+        resultsContainer.innerHTML = "";
+        // Hide results, show spinner
+        resultsSection.classList.add("d-none");
+        const spinner = document.getElementById("verifying-spinner");
+        spinner.classList.remove("d-none");
+        spinner.scrollIntoView({ behavior: "smooth" });
+        // Disable the button until a new image is uploaded
+        startVerificationBtn.disabled = true;
 
-          setTimeout(() => {
-            generateResults();
-            // Show CTA section after verification
-            var ctaSection = document.getElementById("cta-section");
-            if (ctaSection) {
-              ctaSection.classList.remove("d-none");
-            }
-            // Optionally reset preview area after verification
-            // previewArea.classList.add("d-none");
-            // uploadedImage = "";
-          }, 2000); // 2 seconds delay for realism
-        });
+        setTimeout(() => {
+          spinner.classList.add("d-none");
+          resultsSection.classList.remove("d-none");
+          generateResults();
+          // Show CTA section after verification
+          var ctaSection = document.getElementById("cta-section");
+          if (ctaSection) {
+            ctaSection.classList.remove("d-none");
+          }
+          // Optionally reset preview area after verification
+          // previewArea.classList.add("d-none");
+          // uploadedImage = "";
+        }, 3500); // 3.5 seconds delay for realism
+      });
 
       function generateResults() {
         const selectedPlatforms = shuffleArray(platforms).slice(0, 4); // Show 4 platforms
@@ -480,5 +500,7 @@
     </script>
     <script src="search-history.js"></script>
     <script src="script.js"></script>
+
+   
   </body>
 </html>
