@@ -425,3 +425,68 @@ function applyTheme(choice) {
     document.body.style.color = "#212529";
   }
 }
+
+// toggle logic
+
+// Theme toggle logic
+const themeButtons = document.querySelectorAll(".theme-toggle");
+
+function setTheme(theme) {
+  if (theme === "dark") {
+    document.body.classList.add("dark-mode");
+    document.body.classList.remove("light-mode");
+    localStorage.setItem("verifai-theme", "dark");
+  } else if (theme === "light") {
+    document.body.classList.add("light-mode");
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("verifai-theme", "light");
+  } else {
+    // System default
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("light-mode");
+    } else {
+      document.body.classList.add("light-mode");
+      document.body.classList.remove("dark-mode");
+    }
+    localStorage.setItem("verifai-theme", "system");
+  }
+}
+
+themeButtons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    setTheme(btn.dataset.theme);
+  });
+});
+
+// On page load, set theme from localStorage or system
+(function () {
+  const savedTheme = localStorage.getItem("verifai-theme");
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else {
+    setTheme("system");
+  }
+})();
+
+// Listen for system theme changes if system is selected
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (e) => {
+    if (localStorage.getItem("verifai-theme") === "system") {
+      setTheme("system");
+    }
+  });
+
+//// werey
+document
+  .querySelectorAll(".dropdown-submenu .dropdown-toggle")
+  .forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      let submenu = el.nextElementSibling;
+      if (submenu) submenu.classList.toggle("show");
+    });
+  });
