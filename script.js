@@ -120,7 +120,9 @@ function getFAQAnswer(input) {
   const match = faqList.find((faq) =>
     input.toLowerCase().includes(faq.question.toLowerCase().split(" ")[0])
   );
-  return match ? match.answer : "I'm sorry, I couldn't find an answer to that. Contact our support team for help.";
+  return match
+    ? match.answer
+    : "I'm sorry, I couldn't find an answer to that. Contact our support team for help.";
 }
 
 // Send message
@@ -158,16 +160,6 @@ function togglePassword() {
 }
 
 // user dashboard page
-
-
-
-
-
-
-
-
-
-
 
 // Footer
 document.getElementById("year").textContent = new Date().getFullYear();
