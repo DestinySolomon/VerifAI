@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden; /* stops horizontal scroll */
+}
+
 .subnav {
   position: fixed;
   top: 0;
@@ -9,8 +15,8 @@ html {
   z-index: 1057;
 }
 
-.navbar-brand{
-   font-family: "Playwrite HU", cursive;
+.navbar-brand {
+  font-family: "Playwrite HU", cursive;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -1184,6 +1190,18 @@ input[type="password"] {
   padding: 40px 20px;
   text-align: center;
   border-radius: 0 0 30px 30px;
+}
+
+.accordion {
+  max-width: 100%;
+}
+
+.accordion-button {
+  white-space: normal; /* so long questions wrap instead of stretching */
+}
+
+.faq-header {
+  max-width: 100%;
 }
 
 .accordion-button:not(.collapsed) {
