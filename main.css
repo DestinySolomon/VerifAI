@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body.dark-mode .form-select,
 body.dark-mode .form-select-sm {
   background-color: #23272b !important;

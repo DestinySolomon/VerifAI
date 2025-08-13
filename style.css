@@ -9,6 +9,13 @@ html {
   z-index: 1057;
 }
 
+.navbar-brand{
+   font-family: "Playwrite HU", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
 .navbar {
   position: fixed;
   top: 30px;
