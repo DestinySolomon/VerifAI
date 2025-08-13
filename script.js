@@ -120,7 +120,7 @@ function getFAQAnswer(input) {
   const match = faqList.find((faq) =>
     input.toLowerCase().includes(faq.question.toLowerCase().split(" ")[0])
   );
-  return match ? match.answer : "I'm sorry, I couldn't find an answer to that.";
+  return match ? match.answer : "I'm sorry, I couldn't find an answer to that. Contact our support team for help.";
 }
 
 // Send message
